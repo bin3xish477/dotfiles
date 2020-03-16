@@ -2,6 +2,8 @@
 set nocompatible
 " enable syntax highlighting
 syntax enable
+" show number lines
+set number
 filetype plugin on
 " allows vim to recursively look for files
 set path+=**
