@@ -84,9 +84,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-#alias ll='ls -l'
-alias la='ls -lah'
-#alias l='ls -CF'
+alias l='ls'
+alias ll='ls -ltra'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -109,8 +108,10 @@ if ! shopt -oq posix; then
 fi
 
 # custom aliases
-alias c='clear'
+alias cls='clear'
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
+alias htb='sudo openvpn /root/Downloads/BinexisHATT.ovpn'
+alias mkdir='mkdir -p'
