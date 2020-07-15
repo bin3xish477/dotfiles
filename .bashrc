@@ -115,3 +115,9 @@ alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 alias htb='sudo openvpn /root/Downloads/BinexisHATT.ovpn'
 alias mkdir='mkdir -p'
+alias nmap='grc nmap'
+
+# exporting GOPATH
+export GOPATH=/root/go-workspace
+export GOROOT=/usr/local/go
+PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
