@@ -11,3 +11,5 @@ set noswapfile     "no swap files
 inoremap kj <esc>
 " esc in command mode
 cnoremap kj <C-C>
+"make esc do nothing
+inoremap <Esc> <Nop>
