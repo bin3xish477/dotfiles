@@ -8,8 +8,8 @@ set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
 set noswapfile     "no swap files
 " esc in insert mode
-inoremap kj <esc>
+inoremap jj <esc>
 " esc in command mode
-cnoremap kj <C-C>
-"make esc do nothing
+cnoremap jj <C-C>
+"make esc do nothing"
 inoremap <Esc> <Nop>
