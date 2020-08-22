@@ -10,7 +10,6 @@ cnoremap jj <C-C>
 inoremap <Esc> <Nop>
 
 " PEP 8 Indentation
-
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -18,3 +17,7 @@ set textwidth=79
 set expandtab
 set autoindent
 set fileformat=unix
+set undodir=H:\Opt\Vim\undodir
+set undofile
+syntax on
+colorscheme monokai
