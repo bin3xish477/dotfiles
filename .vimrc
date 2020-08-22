@@ -19,5 +19,6 @@ set autoindent
 set fileformat=unix
 set undodir=H:\Opt\Vim\undodir
 set undofile
+set t_Co=256
 syntax on
 colorscheme monokai
