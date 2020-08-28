@@ -19,6 +19,5 @@ set autoindent
 set fileformat=unix
 set undodir=/home/alexis/vim_undo_dir
 set undofile
-set t_Co=256
 syntax on
-colorscheme gruvbox
+colorscheme monokai
