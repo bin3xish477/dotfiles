@@ -20,4 +20,4 @@ set fileformat=unix
 set undodir=/home/alexis/vim_undo_dir
 set undofile
 syntax on
-colorscheme monokai
+colorscheme sonokai
