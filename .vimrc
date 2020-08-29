@@ -1,4 +1,4 @@
-set number
+set relativenumber
 set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
 set noswapfile     "no swap files
@@ -19,5 +19,6 @@ set autoindent
 set fileformat=unix
 set undodir=/home/alexis/vim_undo_dir
 set undofile
+set t_Co=256
 syntax on
 colorscheme sonokai
