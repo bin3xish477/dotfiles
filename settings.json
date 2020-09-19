@@ -4,6 +4,7 @@
     "C_Cpp.updateChannel": "Insiders",
     "workbench.colorTheme": "Noctis Uva",
     "vim.commandLineModeKeyBindings": [
+
         {
          "before": ["j", "m"],
          "after": ["<esc>"]
@@ -22,5 +23,6 @@
         {
          "before": ["j", "m"],
          "after": ["<esc>"]
-        }]
+        }],
+    "editor.lineNumbers": "relative"
 }
