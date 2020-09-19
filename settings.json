@@ -1,5 +1,5 @@
 {
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "off",
     "extensions.ignoreRecommendations": false,
     "C_Cpp.updateChannel": "Insiders",
     "workbench.colorTheme": "Noctis Uva",
@@ -23,4 +23,4 @@
          "before": ["j", "m"],
          "after": ["<esc>"]
         }],
-    "vim.visual"
+}
