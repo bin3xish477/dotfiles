@@ -1,0 +1,27 @@
+#
+{
+    "files.autoSave": "afterDelay",
+    "extensions.ignoreRecommendations": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.colorTheme": "Noctis Uva",
+    "vim.commandLineModeKeyBindings": [
+        {
+         "before": ["j", "m"],
+         "after": ["<esc>"]
+     }],
+    "vim.insertModeKeyBindings": [
+        {
+         "before": ["j", "m"],
+         "after": ["<esc>"]
+     }],
+    "vim.visualModeKeyBindings": [
+         {
+          "before": ["q"],
+          "after": ["<esc>"]
+         }],
+    "vim.normalModeKeyBindings": [
+        {
+         "before": ["j", "m"],
+         "after": ["<esc>"]
+        }],
+    "vim.visual"
