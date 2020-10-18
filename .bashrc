@@ -113,7 +113,7 @@ alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
-alias htb='sudo openvpn /root/Downloads/BinexisHATT.ovpn'
+alias ......='cd ../../../../../'
 alias mkdir='mkdir -p'
 alias nmap='grc nmap'
 
