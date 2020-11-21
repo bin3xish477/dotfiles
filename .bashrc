@@ -109,6 +109,7 @@ fi
 
 # custom aliases
 alias cls='clear'
+alias ps='ps --forest'
 alias ..='cd ..'
 alias ...='cd ../../../'
 alias ....='cd ../../../../'
