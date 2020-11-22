@@ -10,8 +10,5 @@ set expandtab
 set autoindent
 set undodir=~/.vim_undo_dir
 set undofile
-noremap jm <esc>
-noremap! jm <esc>
-
-syntax on
-colorscheme monokai
+noremap jj <esc>
+noremap! jj <esc>
