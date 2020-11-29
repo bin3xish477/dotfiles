@@ -10,5 +10,9 @@ set expandtab
 set autoindent
 set undodir=~/.vim_undo_dir
 set undofile
-noremap jj <esc>
-noremap! jj <esc>
+
+"make jj do esc"
+inoremap jj <Esc>
+
+"make esc do nothing"
+inoremap <Esc> <Nop>
