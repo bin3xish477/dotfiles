@@ -115,7 +115,7 @@ alias ...='cd ../../../'
 alias ....='cd ../../../../'
 alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
-alias mkdir='mkdir -p'
+alias mk='mkdir -p'
 alias nmap='grc nmap'
 
 # exporting GOPATH
