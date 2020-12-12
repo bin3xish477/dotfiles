@@ -37,6 +37,7 @@ call plug#begin('.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " run :PlugInstall to install plugins
 call plug#end()
