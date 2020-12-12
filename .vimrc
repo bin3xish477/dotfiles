@@ -8,11 +8,29 @@ set shiftwidth=4
 set textwidth=79
 set expandtab
 set autoindent
-set undodir=~/.vim_undo_dir
 set undofile
+set undodir=C:/Users/rodri/undodir
+set encoding=utf-8
 
 "make jj do esc"
 inoremap jj <Esc>
 
 "make esc do nothing"
 inoremap <Esc> <Nop>
+
+"for easier movement between Vim panes
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+colorscheme molokai
+
+" create directory called plugged in .vim folder
+call plug#begin('.vim/plugged')
+
+Plug 'itchyny/lightline.vim'
+Plug 'maxboisvert/vim-simple-complete'
+
+" run :PlugInstall to install plugins
+call plug#end()
