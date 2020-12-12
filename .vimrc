@@ -18,6 +18,12 @@ inoremap jj <Esc>
 "make esc do nothing"
 inoremap <Esc> <Nop>
 
+" toggle paste/nopaste modes
+set pastetoggle=<F2>
+
+" for lightline plugin
+set laststatus=2
+
 "for easier movement between Vim panes
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
