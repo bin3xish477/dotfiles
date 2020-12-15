@@ -117,8 +117,10 @@ alias .....='cd ../../../../'
 alias ......='cd ../../../../../'
 alias mk='mkdir -p'
 alias nmap='grc nmap'
+alias py3='python3'
+alias py='python'
 
 # exporting GOPATH
 export GOPATH=/root/go-workspace
 export GOROOT=/usr/local/go
-PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
