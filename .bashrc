@@ -119,6 +119,7 @@ alias mk='mkdir -p'
 alias nmap='grc nmap'
 alias py3='python3'
 alias py='python'
+alias s='sudo'
 
 # exporting GOPATH
 export GOPATH=/root/go-workspace
