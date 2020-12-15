@@ -8,7 +8,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set undofile
-set undodir=C:/Users/rodri/undodir
+set undodir=~/.undodir
 set encoding=utf-8
 
 "make jj do esc"
