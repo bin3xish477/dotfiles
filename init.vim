@@ -1,3 +1,7 @@
+"
+" Install vim-plug for Neovim first: https://github.com/junegunn/vim-plug
+"
+
 set relativenumber
 set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
