@@ -11,6 +11,9 @@ set undofile
 set undodir=~/.undodir
 set encoding=utf-8
 
+" fix tmux coloring issues
+set term=screen-256color
+
 "make jj do esc"
 inoremap jj <Esc>
 
