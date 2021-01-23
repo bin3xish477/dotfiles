@@ -30,6 +30,9 @@ set pastetoggle=<F2>
 " for lightline plugin
 set laststatus=2
 
+" hex editing highlighting
+set ft=xxd
+
 "for easier movement between Vim panes
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
