@@ -26,6 +26,11 @@ set pastetoggle=<F2>
 " for lightline plugin
 set laststatus=2
 
+" hex editing syntax highlighting
+" enter xxd mode with -> :%!xxd
+" exit xxd mode with -> :%!xxd -r
+set ft=xxd
+
 "for easier movement between Vim panes
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
