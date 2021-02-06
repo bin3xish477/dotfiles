@@ -125,3 +125,9 @@ alias s='sudo'
 export GOPATH=/root/go-workspace
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
+
+# check if we're not in tmux terminal
+if [[ ! "$TMUX" =~ "screen".* ]]
+then
+	tmux new -s main
+fi
