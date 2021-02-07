@@ -27,5 +27,5 @@ alias please="sudo"
 
 if [[ ! "$TMUX" =~ "screen".* ]]
 then
-  tmux new -s main
+  tmux
 fi
