@@ -1,5 +1,5 @@
 # Prompt
-PROMPT="%F{red}┌[%f%F{cyan}%m%f%F{red}]─[%f%F{yellow}%D{%H:%M-%d}%f%F{red}]─[%f%F{magenta}%d%f%F{red}]%f"$'\n'"%F{red}└╼ %f%F{green}$USER%f%F{yellow}$%f "
+PROMPT="%F{red}┌[%f%F{cyan}%m%f%F{red}]─[%f%F{yellow}%D{%H:%M %d/%m/%y}%f%F{red}]─[%f%F{magenta}%d%f%F{red}]%f"$'\n'"%F{red}└╼ %f%F{green}$USER%f%F{yellow}$%f "
 
 # alias
 alias ls='ls -lh --color=auto'
