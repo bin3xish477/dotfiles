@@ -25,7 +25,7 @@ alias py3="python3"
 alias py="python"
 alias please="sudo"
 
-if [[ ! "$TMUX" =~ "screen".* ]]
+if [[ -z "$TMUX" ]]
 then
   tmux
 fi
