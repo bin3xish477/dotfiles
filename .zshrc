@@ -49,6 +49,12 @@ alias upgrade="yes | sudo apt upgrade"
 alias autoremove="yes | sudo apt autoremove"
 alias autoclean="sudo apt autoclean"
 
+# exporting ~/.local/bin to shell path
+if [[ -d "$HOME/.local/bin" ]]
+then
+    export PATH="$PATH:$HOME/.local/bin"
+fi
+
 if [[ -z "$TMUX" ]]
 then
     tmux
