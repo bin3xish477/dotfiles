@@ -48,6 +48,7 @@ alias update="sudo apt update"
 alias upgrade="yes | sudo apt upgrade"
 alias autoremove="yes | sudo apt autoremove"
 alias autoclean="sudo apt autoclean"
+alias install="yes | sudo apt install"
 
 # exporting ~/.local/bin to shell path
 if [[ -d "$HOME/.local/bin" ]]
