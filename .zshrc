@@ -35,6 +35,9 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+# sudo apt install xclip
+alias clip="xclip -selection clipboard"
+alias curl="curl --no-progress-meter"
 alias py3="python3"
 alias py="python"
 alias nmap="grc nmap"
@@ -57,4 +60,11 @@ fi
 if [[ -z "$TMUX" ]]
 then
     tmux
+fi
+
+# run obisidian markdown editor
+if [[ ! $(pgrep obsidian) ]]; then
+    if [[ -f "$HOME/.local/bin/obsidian" ]]; then
+        "$HOME/.local/bin/obsidian" &>/dev/null &
+    fi
 fi
