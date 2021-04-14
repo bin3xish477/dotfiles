@@ -63,8 +63,8 @@ then
 fi
 
 # run obisidian markdown editor
-if [[ ! $(pgrep obsidian) ]]; then
-    if [[ -f "$HOME/.local/bin/obsidian" ]]; then
-        "$HOME/.local/bin/obsidian" &>/dev/null &
-    fi
-fi
+#if [[ ! $(pgrep obsidian) ]]; then
+#    if [[ -f "$HOME/.local/bin/obsidian" ]]; then
+#        "$HOME/.local/bin/obsidian" &>/dev/null &
+#    fi
+#fi
