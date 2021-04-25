@@ -53,4 +53,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
+Plug 'gruvbox-community/gruvbox'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
+
+colorscheme gruvbox
