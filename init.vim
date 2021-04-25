@@ -51,4 +51,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'jiangmiao/auto-pairs'
+Plug 'machakann/vim-sandwich'
 call plug#end()
