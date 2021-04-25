@@ -50,4 +50,5 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
