@@ -1,7 +1,6 @@
 "
 " Install vim-plug for Neovim first: https://github.com/junegunn/vim-plug
 "
-
 set relativenumber
 set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
@@ -44,7 +43,6 @@ inoremap <S-Tab> <C-d>
 
 "See invisible characters
 set list listchars=tab:>\ ,trail:+,eol:$
-
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
