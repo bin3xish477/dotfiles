@@ -49,7 +49,6 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'gruvbox-community/gruvbox'
