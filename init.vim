@@ -49,6 +49,7 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'gruvbox-community/gruvbox'
@@ -56,6 +57,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+" <c-y>, (Ctrl + y,) to use plugin
 Plug 'mattn/emmet-vim'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -67,8 +69,15 @@ let mapleader=","
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fr <cmd>Telescope file_browser<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+nnoremap <leader>fz <cmd>FZF <cr>
+
+" EMMET
+let g:user_emmet_leader_key=","
+
+" gruvbox FTW, thank you ThePrimeagen
 colorscheme gruvbox
