@@ -48,6 +48,8 @@ alias upgrade="yes | sudo apt upgrade"
 alias autoremove="yes | sudo apt autoremove"
 alias autoclean="sudo apt autoclean"
 alias install="yes | sudo apt install"
+alias ymd="date '+%Y%m%d'"
+alias report_ext="date '+%Y%m%d.%H%M%S'"
 
 # exporting ~/.local/bin to shell path
 if [[ -d "$HOME/.local/bin" ]]
