@@ -62,5 +62,6 @@ then
     tmux
 fi
 
-# FZF default command to include hidden files
-export FZF_DEFAULT_COMMAND="find -L"
+# FZF  -----------------
+# using ripgrep
+export FZF_DEFAULT_COMMAND="rg --files"
