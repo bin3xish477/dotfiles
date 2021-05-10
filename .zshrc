@@ -22,6 +22,7 @@ then
 fi
 
 # aliases
+alias ps="ps --forest"
 alias cat="bat"
 alias clip="xclip -selection clipboard"
 alias py3="python3"
