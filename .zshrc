@@ -1,12 +1,14 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# install zsh
+# sudo apt install zsh
+# install oh-my-zsh
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/home/arodriguez/.oh-my-zsh"
+export FZF_DEFAULT_COMMAND="rg --files"
 
 ZSH_THEME="robbyrussell"
-
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
 if [[ -d "$HOME/.local/bin" ]]
@@ -18,8 +20,6 @@ if [[ -z "$TMUX" ]]
 then
     tmux
 fi
-
-export FZF_DEFAULT_COMMAND="rg --files"
 
 # aliases
 alias cat="bat"
