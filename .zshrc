@@ -10,7 +10,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/home/arodriguez/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="rg --files"
 
-ZSH_THEME="afowler"
+ZSH_THEME="imajes"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
