@@ -25,6 +25,7 @@ then
 fi
 
 # aliases
+alias vim="nvim"
 alias ps="ps --forest"
 alias cat="bat"
 alias clip="xclip -selection clipboard"
