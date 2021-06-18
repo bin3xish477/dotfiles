@@ -68,4 +68,4 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " EMMET
 let g:user_emmet_leader_key=";"
 
-colorscheme blackwolf
+colorscheme badwolf
