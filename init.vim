@@ -23,9 +23,6 @@ inoremap <Esc> <Nop>
 " toggle paste/nopaste modes
 set pastetoggle=<F2>
 
-" for lightline plugin
-set laststatus=2
-
 " hex editing highlighting
 set ft=xxd
 
@@ -38,32 +35,25 @@ nnoremap <C-H> <C-W><C-H>
 "Fix cursor replacement after closing nvim
 set guicursor=
 
-"Shift + Tab does inverse tab
-inoremap <S-Tab> <C-d>
-
 "See invisible characters
 set list listchars=tab:>\ ,trail:+,eol:$
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
-Plug 'gruvbox-community/gruvbox'
 Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'mattn/emmet-vim'
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Set mapleader
-let mapleader=","
+let mapleader=";"
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -73,7 +63,6 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " EMMET
-let g:user_emmet_leader_key=","
+let g:user_emmet_leader_key=";"
 
-" gruvbox FTW, thank you ThePrimeagen
-colorscheme gruvbox
+colorscheme blackwolf
