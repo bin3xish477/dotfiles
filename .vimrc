@@ -32,6 +32,7 @@ cnoremap Q :q!<CR>
 
 " open vimrc file
 nnoremap <leader>rc :split $MYVIMRC<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR> :wq<CR>
 
 " toggle paste/nopaste modes
 set pastetoggle=<F2>
