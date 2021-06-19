@@ -30,9 +30,6 @@ inoremap jj <Esc>
 " faster exit key
 cnoremap Q :q!<CR>
 
-"make esc do nothing"
-inoremap <Esc> <Nop>
-
 " open vimrc file
 nnoremap <leader>rc :split $MYVIMRC<CR>
 
@@ -49,7 +46,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "See invisible characters
-set list listchars=tab:>\ ,trail:+,eol:$
+" set list listchars=tab:>\ ,trail:+,eol:$
+set list listchars=trail:-,eol:$
 
 call plug#begin()
 Plug 'itchyny/lightline.vim'
