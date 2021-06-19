@@ -4,24 +4,36 @@
 " installing vim-plug for Vim
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+" installing vim-plug on Windows
+wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O $VIMDIR/autoload/plug.vim
+" Set leader key
+let mapleader=","
+let maplocalleader=","
+
 set relativenumber
 set nobackup       "no backup files
-set nowritebackup  "only in case you don't want a backup file while editing
-set noswapfile     "no swap files
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+set nowritebackup
+"only in case you don't want a backup file while editing
+set noswapfile
 set autoindent
 set undofile
-set undodir=~/.undodir
+set undodir=C:\Users\rodri\.undodir
 set encoding=utf-8
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 "make jj do esc"
 inoremap jj <Esc>
 
+" faster exit key
+cnoremap Q :q!<CR>
+
 "make esc do nothing"
 inoremap <Esc> <Nop>
+
+" open vimrc file
+cnoremap <leader>rc :split $MYVIMRC<CR>
 
 " toggle paste/nopaste modes
 set pastetoggle=<F2>
@@ -53,10 +65,9 @@ Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
-" Set mapleader
-let mapleader=";"
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -65,7 +76,14 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" EMMET
-let g:user_emmet_leader_key=";"
+" Emmet
+let g:user_emmet_leader_key=","
 
-colorscheme badwolf
+""" set default terminal """
+if has("win32")
+  set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+else
+  set shell=/bin/zsh
+endif
+
+colorscheme quantum
