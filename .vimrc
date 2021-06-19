@@ -8,13 +8,14 @@
 " wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O $VIMDIR/autoload/plug.vim
 
 " Set leader key
-let mapleader=","
-let maplocalleader=","
+let mapleader="<"
+let maplocalleader="<"
+
+" SETTINGS ----------------------------------- {{{
 
 set relativenumber
-set nobackup       "no backup files
+set nobackup
 set nowritebackup
-"only in case you don't want a backup file while editing
 set noswapfile
 set autoindent
 set undofile
@@ -23,37 +24,58 @@ set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
 set expandtab
+" toggle paste/nopaste modes
+set pastetoggle=<F2>
+" hex editing highlighting
+set ft=xxd
+"See invisible characters
+" set list listchars=tab:<->\ ,trail:+,eol:$
+set list listchars=trail:-,eol:$
+set cursorline
+set cursorcolumn
+" ignore letter case while searching
+set ignorecase
+" use highlighting when doing search
+set hlsearch
+" don't wrap lines
+set nowrap
+
+colorscheme quantum
+" }}}
+
+" MAPPINGS ----------------------------------- {{{
 
 "make jj do esc"
 inoremap jj <Esc>
 
 " faster exit key
-cnoremap Q :q!<CR>
+cnoremap Q :q!<cr>
 
-" open vimrc file
-nnoremap <leader>rc :split $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR> :wq<CR>
+" open/source vimrc file
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr> :wq<cr>
 
-" toggle paste/nopaste modes
-set pastetoggle=<F2>
-
-" hex editing highlighting
-set ft=xxd
+" wrap current word in double quotes
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lw
+" wrap current word in single quotes
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lw
 
 "for easier movement between Vim panes
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" }}}
 
-"See invisible characters
-" set list listchars=tab:>\ ,trail:+,eol:$
-set list listchars=trail:-,eol:$
+" PLUGINS ------------------------------------ {{{
 
-call plug#begin()
+if has("win32")
+    call plug#begin("F:/Opt/Vim/vim82/plugged")
+else
+    call plug#begin("~/.vim/plugged")
+endif
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
-Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lua/popup.nvim'
@@ -64,6 +86,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
+" }}}
+
+" VIMSCRIPT ---------------------------------- {{{
 
 " Emmet
 let g:user_emmet_leader_key=","
@@ -75,6 +100,8 @@ else
   set shell=/bin/zsh
 endif
 
+" ABBREVIATIONS ------------------------------ {{{
+
 " insert mode abbreviations
 iabbrev waht what
 iabbrev tehn then
@@ -83,5 +110,5 @@ iabbrev yuo you
 iabbrev hwen when
 iabbrev thnik think
 iabbrev @@ rodriguez10011999@gmail.com
+" }}}
 
-colorscheme quantum
