@@ -5,7 +5,8 @@
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 " installing vim-plug on Windows
-wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O $VIMDIR/autoload/plug.vim
+" wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O $VIMDIR/autoload/plug.vim
+
 " Set leader key
 let mapleader=","
 let maplocalleader=","
@@ -33,7 +34,7 @@ cnoremap Q :q!<CR>
 inoremap <Esc> <Nop>
 
 " open vimrc file
-cnoremap <leader>rc :split $MYVIMRC<CR>
+nnoremap <leader>rc :split $MYVIMRC<CR>
 
 " toggle paste/nopaste modes
 set pastetoggle=<F2>
@@ -46,9 +47,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-"Fix cursor replacement after closing nvim
-set guicursor=
 
 "See invisible characters
 set list listchars=tab:>\ ,trail:+,eol:$
@@ -67,7 +65,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
-
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
