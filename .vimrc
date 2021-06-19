@@ -13,6 +13,7 @@ let maplocalleader="<"
 
 " SETTINGS ----------------------------------- {{{
 
+set nocompatible
 set relativenumber
 set nobackup
 set nowritebackup
@@ -39,27 +40,28 @@ set ignorecase
 set hlsearch
 " don't wrap lines
 set nowrap
+if has('gui_running')
+  set guifont=Cascadia\ Mono:h11
+endif
 
-colorscheme quantum
+filetype plugin on
 " }}}
 
 " MAPPINGS ----------------------------------- {{{
 
 "make jj do esc"
 inoremap jj <Esc>
-
 " faster exit key
 cnoremap Q :q!<cr>
-
 " open/source vimrc file
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr> :wq<cr>
-
 " wrap current word in double quotes
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lw
 " wrap current word in single quotes
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lw
-
+" wrap current word in paranthesis
+nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lw
 "for easier movement between Vim panes
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -69,29 +71,36 @@ nnoremap <C-H> <C-W><C-H>
 
 " PLUGINS ------------------------------------ {{{
 
-if has("win32")
+if has('win32')
     call plug#begin("F:/Opt/Vim/vim82/plugged")
 else
     call plug#begin("~/.vim/plugged")
 endif
+Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
-Plug 'machakann/vim-sandwich'
 Plug 'airblade/vim-gitgutter'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
+
+" emmet
+let g:user_emmet_leader_key="<"
+
+" gitgutter specify git executable path
+if has('win32')
+  let g:gitgutter_git_executable = 'F:\opt\Git\Git\bin\git.exe'
+else
+  let g:gitgutter_git_executable = '/usr/bin/git'
+endif
+
 " }}}
 
 " VIMSCRIPT ---------------------------------- {{{
-
-" Emmet
-let g:user_emmet_leader_key=","
 
 """ set default terminal """
 if has("win32")
@@ -112,3 +121,7 @@ iabbrev thnik think
 iabbrev @@ rodriguez10011999@gmail.com
 " }}}
 
+" dracula vim (https://draculatheme.com/vim)
+packadd! dracula
+syntax enable
+colorscheme dracula
