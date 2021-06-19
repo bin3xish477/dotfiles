@@ -75,4 +75,13 @@ else
   set shell=/bin/zsh
 endif
 
+" insert mode abbreviations
+iabbrev waht what
+iabbrev tehn then
+iabbrev adn and
+iabbrev yuo you
+iabbrev hwen when
+iabbrev thnik think
+iabbrev @@ rodriguez10011999@gmail.com
+
 colorscheme quantum
