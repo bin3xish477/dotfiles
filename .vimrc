@@ -1,12 +1,3 @@
-" installing vim-plug for Neovim
-" sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-" installing vim-plug for Vim
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-" installing vim-plug on Windows
-" wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim -O $VIMDIR/autoload/plug.vim
-
 " Set leader key
 let mapleader="<"
 let maplocalleader="<"
@@ -20,7 +11,11 @@ set nowritebackup
 set noswapfile
 set autoindent
 set undofile
-set undodir=C:\Users\rodri\.undodir
+if has('win32')
+  set undodir=C:\Users\rodri\.undodir
+else
+  set undodir=~/.undodir
+endif
 set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
@@ -56,19 +51,47 @@ cnoremap Q :q!<cr>
 " open/source vimrc file
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr> :wq<cr>
+" wrap visually selected text in double quotes
+vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
+" wrap visually selected text in single quotes
+vnoremap <leader>' <esc>`<i'<esc>`>la'<esc>
+" wrap visually selected text in paranthesis
+vnoremap <leader>( <esc>`<i(<esc>`>la)<esc>
+" wrap visually selected text in square brackets
+vnoremap <leader>[ <esc>`<i[<esc>`>la]<esc>
+" wrap visually selected text in curly brackets
+vnoremap <leader>{ <esc>`<i{<esc>`>la}<esc>
+" wrap visually selected line in double quotes
+xnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
+" wrap visually selected line in single quotes
+xnoremap <leader>' <esc>`<i'<esc>`>a'<esc>
+" wrap visually selected line in paranthesis
+xnoremap <leader>( <esc>`<i(<esc>`>a)<esc>
+" wrap visually selected line in square brackets
+xnoremap <leader>[ <esc>`<i[<esc>`>a]<esc>
+" wrap visually selected line in curly brackets
+xnoremap <leader>{ <esc>`<i{<esc>`>a}<esc>
 " wrap current word in double quotes
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lw
 " wrap current word in single quotes
 nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lw
 " wrap current word in paranthesis
 nnoremap <leader>( viw<esc>a)<esc>bi(<esc>lw
+" wrap current word in square brackets
+nnoremap <leader>[ viw<esc>a[<esc>bi]<esc>lw
+" wrap current word in curly brackets
+nnoremap <leader>{ viw<esc>a{<esc>bi}<esc>lw
+" move to beginning of line
+nnoremap H ^
+" move to the end of line
+nnoremap L $
 "for easier movement between Vim panes
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " }}}
-
+"
 " PLUGINS ------------------------------------ {{{
 
 if has('win32')
