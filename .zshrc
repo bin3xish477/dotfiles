@@ -3,8 +3,17 @@
 # install oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# alternative custom prompt
-#PS1="\n\[\e[30;1m\]\[\016\]l\[\017\](\[\e[34;1m\]\u@\h\[\e[30;1m\])-(\[\e[34;1m\]\j\[\e[30;1m\])-(\[\e[34;1m\]\@ \d\[\e[30;1m\])->\[\e[30;1m\]\n\[\016\]m\[\017\]-(\[\[\e[32;1m\]\w\[\e[30;1m\])-(\[\e[32;1m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files, \$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\e[30;1m\])--> \[\e[0m\]"
+red="\e[0;91m"
+blue="\e[0;94m"
+green="\e[0;92m"
+white="\e[0;97m"
+bold="\e[1m"
+uline="\e[4m"
+reset="\e[0m"
+
+export PROMPT="$(echo -e $red)$(echo -e $uline)%n$(echo -e $reset)\
+$(echo -e $bold)::$(echo -e $reset)\
+($(echo -e $blue)%m$(echo -e $reset)) π "
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
