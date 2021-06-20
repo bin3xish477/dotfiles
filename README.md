@@ -3,31 +3,5 @@
 ### My Custom Prompt
 #### Zsh
 ```bash
-red="\e[0;91m"                                                                                 
-blue="\e[0;94m"                                                                                
-green="\e[0;92m"                                                                               
-yellow="\e[0;33m"                              
-white="\e[0;97m"                     
-bold="\e[1m"                                                                                                                                                                                   
-uline="\e[4m"                                                                                  
-reset="\e[0m"                                                                                  
-                                                                                               
-export PROMPT="$(echo -e $red)$(echo -e $uline)%n$(echo -e $reset)\                                                                                                   $(echo -e $bold)::$(echo -e $reset)\                                                           
-($(echo -e $blue)%m$(echo -e $reset)) $(echo -e $yellow)π$(echo -e $reset)∫ "
-```
-
-#### Bash
-```bash
-red="\e[0;91m"
-blue="\e[0;94m"
-green="\e[0;92m"
-yellow="\e[0;33m"
-white="\e[0;97m"
-bold="\e[1m"
-uline="\e[4m"
-reset="\e[0m"
-
-export PS1="$(echo -e $red)$(echo -e $uline)\u$(echo -e $reset)\
-$(echo -e $bold)::$(echo -e $reset)\
-($(echo -e $blue)\h$(echo -e $reset)) $(echo -e $yellow)π$(echo -e $reset)∫ "
+PS1="%F{red}%n%f::(%F{blue}%m%f) %F{yellow}π%f∫ "
 ```
