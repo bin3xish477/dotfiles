@@ -13,7 +13,7 @@ reset="\e[0m"
 
 export PROMPT="$(echo -e $red)$(echo -e $uline)%n$(echo -e $reset)\
 $(echo -e $bold)::$(echo -e $reset)\
-($(echo -e $blue)%m$(echo -e $reset)) π "
+($(echo -e $blue)%m$(echo -e $reset)) π∫ "
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
