@@ -13,7 +13,7 @@ reset="\e[0m"
 
 export PROMPT="$(echo -e $red)$(echo -e $uline)%n$(echo -e $reset)\
 $(echo -e $bold)::$(echo -e $reset)\
-($(echo -e $blue)%m$(echo -e $reset)) π "
+($(echo -e $blue)%m$(echo -e $reset)) π∫ "
 ```
 #### Bash
 ```bash
@@ -27,5 +27,5 @@ reset="\e[0m"
 
 export PS1="$(echo -e $red)$(echo -e $uline)\u$(echo -e $reset)\
 $(echo -e $bold)::$(echo -e $reset)\
-($(echo -e $blue)\h$(echo -e $reset)) π "
+($(echo -e $blue)\h$(echo -e $reset)) π∫ "
 ```
