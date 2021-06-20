@@ -33,7 +33,6 @@ then
 fi
 
 # aliases
-alias vim="nvim"
 alias ps="ps --forest"
 alias cat="bat"
 alias clip="xclip -selection clipboard"
@@ -49,4 +48,4 @@ alias autoremove="yes | sudo apt autoremove"
 alias autoclean="sudo apt autoclean"
 alias install="yes | sudo apt install"
 alias ymd="date '+%Y%m%d'"
-alias report_ext="date '+%Y%m%d%H%M%S'"
+alias dt="date '+%Y%m%d%H%M%S'"
