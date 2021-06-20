@@ -19,7 +19,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 
-ZSH_THEME="imajes"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
