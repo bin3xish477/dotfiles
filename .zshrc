@@ -3,17 +3,7 @@
 # install oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-red="\e[0;91m"
-blue="\e[0;94m"
-green="\e[0;92m"
-white="\e[0;97m"
-bold="\e[1m"
-uline="\e[4m"
-reset="\e[0m"
-
-export PROMPT="$(echo -e $red)$(echo -e $uline)%n$(echo -e $reset)\
-$(echo -e $bold)::$(echo -e $reset)\
-($(echo -e $blue)%m$(echo -e $reset)) π∫ "
+PS1="%F{red}%n%f::(%F{blue}%m%f) %F{yellow}π%f∫ "
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
