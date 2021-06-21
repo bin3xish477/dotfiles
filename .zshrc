@@ -5,7 +5,7 @@
 
 PS1="%F{red}%n%f::(%F{green}%M%f) %U%F{white}%.%f%u %F{yellow}π%f∫ "
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/go/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 
