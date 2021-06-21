@@ -59,7 +59,7 @@ inoremap jj <Esc>
 cnoremap Q :q!<cr>
 " open/source vimrc file
 nnoremap <leader>ev :split $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr> :wq<cr>
+nnoremap <leader>sv :w<cr> :source $MYVIMRC<cr> :q<cr>
 " wrap visually selected text in double quotes
 vnoremap <leader>" <esc>`<i"<esc>`>la"<esc>
 " wrap visually selected text in single quotes
@@ -99,6 +99,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" delete current file
+nnoremap <leader>df :call delete(@%)<cr>
 " }}}
 "
 " PLUGINS ------------------------------------ {{{
@@ -108,6 +110,9 @@ if has('win32')
 else
     call plug#begin("~/.vim/plugged")
 endif
+" install Pyright for coc.vim, Python code completion
+" :CocInstall coc-pyright
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
@@ -151,6 +156,19 @@ iabbrev yuo you
 iabbrev hwen when
 iabbrev thnik think
 iabbrev @@ rodriguez10011999@gmail.com
+" }}}
+
+" AUTOCOMMANDS ---------------------------- {{{
+
+" automatically create specified files without initially saving them
+autocmd BufNewFile *.py,*.sh,*.ps1 :write
+" reindent Python file before reading and writing
+autocmd BufWritePre,BufRead *.py,*.sh,*.ps1 :normal gg=G
+" ----- buffer-local autocmd-abbreviations
+" python if statement abbreviations
+autocmd FileType python :iabbrev <buffer> iff if:<left>
+" bash if statement abbreviations
+autocmd FileType bash :iabbrev <buffer> iff if[[<space>]]; then
 " }}}
 
 " dracula vim (https://draculatheme.com/vim)
