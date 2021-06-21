@@ -3,7 +3,7 @@
 # install oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-PS1="%F{red}%n%f::(%F{blue}%m%f) %F{yellow}π%f∫ "
+PS1="%U%F{red}%n%f%u::(%F{blue}%m%f) %F{yellow}π%f∫ "
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
@@ -37,5 +37,5 @@ alias upgrade="yes | sudo apt upgrade"
 alias autoremove="yes | sudo apt autoremove"
 alias autoclean="sudo apt autoclean"
 alias install="yes | sudo apt install"
-alias ymd="date '+%Y%m%d'"
 alias dt="date '+%Y%m%d%H%M%S'"
+
