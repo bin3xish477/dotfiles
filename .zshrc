@@ -3,7 +3,7 @@
 # install oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-PS1="%U%F{red}%n%f%u::(%F{green}%M%f) %F{white}%.%f %F{yellow}π%f∫ "
+PS1="%F{red}%n%f::(%F{green}%M%f) %U%F{white}%.%f%u %F{yellow}π%f∫ "
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
