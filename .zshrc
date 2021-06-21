@@ -22,7 +22,7 @@ then
     tmux
 fi
 
-# aliases
+# aliases (install grc with apt install grc | pacman -S grc)
 alias ps="ps --forest"
 alias cat="bat"
 alias clip="xclip -selection clipboard"
@@ -33,4 +33,19 @@ alias md5="md5sum"
 alias sha256="sha256sum"
 alias sha1="sha1sum"
 alias dt="date '+%Y%m%d%H%M%S'"
+alias netstat="grc -es netstat"
+alias ping="grc -es ping"
+alias lsof="grc -es lsof"
+alias ld="grc -es ld"
+alias traceroute="grc -es traceroute"
+alias dig="grc -es dig"
+alias env="grc -es env"
+alias ip="grc -es ip"
+alias tail"grc -es tail"
+alias head"grc -es head"
+alias id="grc -es id"
+alias du="grc -es du"
+alias docker="grc -es docker"
+alias iptables="grc -es iptables"
+
 
