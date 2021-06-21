@@ -3,5 +3,5 @@
 ### My Custom Prompt
 #### Zsh
 ```bash
-PS1="%U%F{red}%n%f%u::(%F{green}%M%f) %F{white}%.%f %F{yellow}π%f∫ "
+PS1="%F{red}%n%f::(%F{green}%M%f) %U%F{white}%.%f%u %F{yellow}π%f∫ "
 ```
