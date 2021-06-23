@@ -3,6 +3,8 @@
 # install oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+source ~/.profile
+
 PS1="%F{red}%n%f::(%F{green}%M%f) %U%F{white}%.%f%u %F{yellow}π%f∫ "
 
 export PATH=/usr/local/bin:$PATH
