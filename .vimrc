@@ -101,6 +101,14 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " delete current file
 nnoremap <leader>df :call delete(@%)<cr>
+" operator remap for content in paranthesis
+onoremap p i(
+" operator remap for content in square brackets
+onoremap b i[
+" operator remap for content in single quotes
+onoremap s i'
+" operator remap for content in double quotes
+onoremap q i"
 " }}}
 "
 " PLUGINS ------------------------------------ {{{
