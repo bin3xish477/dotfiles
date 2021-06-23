@@ -5,17 +5,12 @@
 
 PS1="%F{red}%n%f::(%F{green}%M%f) %U%F{white}%.%f%u %F{yellow}π%f∫ "
 
-export PATH=$HOME/go/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-
-if [[ -d "$HOME/.local/bin" ]]
-then
-    export PATH="$PATH:$HOME/.local/bin"
-fi
 
 if [[ -z "$TMUX" ]]
 then
@@ -41,11 +36,9 @@ alias traceroute="grc -es traceroute"
 alias dig="grc -es dig"
 alias env="grc -es env"
 alias ip="grc -es ip"
-alias tail="grc -es tail"
-alias head="grc -es head"
+alias tail"grc -es tail"
+alias head"grc -es head"
 alias id="grc -es id"
 alias du="grc -es du"
 alias docker="grc -es docker"
 alias iptables="grc -es iptables"
-
-
