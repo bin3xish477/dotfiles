@@ -34,8 +34,8 @@ set pastetoggle=<F2>
 " hex editing highlighting
 set ft=xxd
 "See invisible characters
-" set list listchars=tab:<->\ ,trail:+,eol:$
-set list listchars=trail:-,eol:$
+set list listchars=tab:>\ ,trail:+,eol:$
+" set list listchars=trail:-,eol:$
 set cursorline
 set cursorcolumn
 " ignore letter case while searching
@@ -99,6 +99,8 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" change current directory to the directory the current file is in
+nnoremap <leader>cd :cd %:h<cr>
 " delete current file
 nnoremap <leader>df :call delete(@%)<cr>
 " operator remap for content in paranthesis
@@ -109,6 +111,10 @@ onoremap b i[
 onoremap s i'
 " operator remap for content in double quotes
 onoremap q i"
+
+if has('gui_running')
+  nnoremap <leader>p "+gP
+endif
 " }}}
 "
 " PLUGINS ------------------------------------ {{{
@@ -131,10 +137,15 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " emmet
 let g:user_emmet_leader_key="<"
+
+" vim-go
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " gitgutter specify git executable path
 if has('win32')
@@ -153,6 +164,7 @@ if has("win32")
 else
   set shell=/bin/zsh
 endif
+" }}}
 
 " ABBREVIATIONS ------------------------------ {{{
 
@@ -177,6 +189,16 @@ autocmd BufWritePre,BufRead *.py,*.sh,*.ps1 :normal gg=G
 autocmd FileType python :iabbrev <buffer> iff if:<left>
 " bash if statement abbreviations
 autocmd FileType bash :iabbrev <buffer> iff if[[<space>]]; then
+" go build
+autocmd FileType go nnoremap <buffer> <leader>gb <Plug>(go-build)
+" go run
+autocmd FileType go nnoremap <buffer> <leader>gr <Plug>(go-run)
+
+" use `za` to expand and contract folds surrounded by \"{{{ and \" }}} borders
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
 " }}}
 
 " dracula vim (https://draculatheme.com/vim)
