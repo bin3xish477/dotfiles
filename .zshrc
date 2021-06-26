@@ -5,7 +5,7 @@
 
 source ~/.profile
 
-PS1="%F{red}%n%f::(%F{green}%M%f) %U%F{white}%.%f%u %F{yellow}π%f∫ "
+PS1="%F{red}%n%f::[%F{green}%M%f] %U%F{white}%.%f%u %F{yellow}π%f∫ "
 
 export PATH=/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
