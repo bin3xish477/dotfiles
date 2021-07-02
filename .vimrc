@@ -36,7 +36,6 @@ set ft=xxd
 "See invisible characters
 set list listchars=tab:>\ ,trail:+,eol:$
 " set list listchars=trail:-,eol:$
-set cursorline
 set cursorcolumn
 " ignore letter case while searching
 set ignorecase
@@ -115,8 +114,28 @@ onoremap q i"
 if has('gui_running')
   nnoremap <leader>p "+gP
 endif
+
+" exit terminal window with <Esc>
+tnoremap <Esc> <c-\><c-n>:q!<cr>
+
+" MarkDown Setup 
+nnoremap <leader>md :normal i
+  \# Title<cr>o<cr>o<cr>
+  \## Subtitle<cr>o<cr>o<cr>
+  \## Subtitle<cr>o<cr>o<cr>
+
+" Python Setup PlaceHolder Code
+nnoremap <leader>py :normal i
+  \#!/usr/bin/env python3<esc>o<cr>
+  \def main():<cr>
+  \<tab>pass<esc>o<cr>
+  \<bs>if f"{__name__}" == "__main__":<cr>
+  \<tab>pass<cr><esc>
+
+" Go Setup PlaceHolder Code
+nnoremap <leader>go :normal i
+" finish this!
 " }}}
-"
 " PLUGINS ------------------------------------ {{{
 
 if has('win32')
@@ -158,12 +177,16 @@ endif
 
 " VIMSCRIPT ---------------------------------- {{{
 
-""" set default terminal """
-if has("win32")
-  set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-else
-  set shell=/bin/zsh
-endif
+""" set default terminal based on OS"""
+function SetTerm()
+  if has("win32")
+    set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+  else
+    set shell=/bin/zsh
+  endif
+endfunction
+
+call SetTerm()
 " }}}
 
 " ABBREVIATIONS ------------------------------ {{{
@@ -193,7 +216,6 @@ autocmd FileType bash :iabbrev <buffer> iff if[[<space>]]; then
 autocmd FileType go nnoremap <buffer> <leader>gb <Plug>(go-build)
 " go run
 autocmd FileType go nnoremap <buffer> <leader>gr <Plug>(go-run)
-
 " use `za` to expand and contract folds surrounded by \"{{{ and \" }}} borders
 augroup filetype_vim
   autocmd!
@@ -201,7 +223,7 @@ augroup filetype_vim
 augroup END
 " }}}
 
-" dracula vim (https://draculatheme.com/vim)
-packadd! dracula
-syntax enable
-colorscheme dracula
+" -- COLORSCHEME ---------------------------- {{{
+" https://github.com/tomasr/molokai/blob/master/colors/molokai.vim
+colorscheme molokai
+" }}}
