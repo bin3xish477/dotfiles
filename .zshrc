@@ -12,7 +12,7 @@ export TERM=xterm-256color
 
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-PS1="› %U%F{white}%.%f%u %F{yellow}π%f∫ "
+PS1="%B%F{white}›%f%b %U%F{white}%.%f%u %F{yellow}π%f∫ "
 
 if [[ -z "$TMUX" ]]
 then
