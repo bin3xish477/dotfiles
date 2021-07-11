@@ -5,6 +5,8 @@
 
 source ~/.profile
 
+PS1="%B%F{white}›%f%b %U%F{white}%.%f%u %F{yellow}π%f∫ "
+
 export PATH=/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
@@ -12,7 +14,6 @@ export TERM=xterm-256color
 
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-PS1="%B%F{white}›%f%b %U%F{white}%.%f%u %F{yellow}π%f∫ "
 
 if [[ -z "$TMUX" ]]
 then
@@ -21,9 +22,10 @@ fi
 
 # aliases (install grc with apt install grc | pacman -S grc)
 alias ps="ps --forest"
+alias curl="curl -s"
 alias cat="bat"
 alias clip="xclip -selection clipboard"
-alias py3="python3"
+alias py3="python3.9"
 alias nmap="grc nmap"
 alias please="sudo"
 alias md5="md5sum"
@@ -38,9 +40,14 @@ alias traceroute="grc -es traceroute"
 alias dig="grc -es dig"
 alias env="grc -es env"
 alias ip="grc -es ip"
-alias tail"grc -es tail"
-alias head"grc -es head"
+alias tail="grc -es tail"
+alias head="grc -es head"
 alias id="grc -es id"
 alias du="grc -es du"
 alias docker="grc -es docker"
 alias iptables="grc -es iptables"
+alias gor="go run"
+alias gob="go build"
+alias gita="git add ."
+alias gitc="git commit -m"
+alias gitp="git push"
