@@ -52,3 +52,5 @@ alias gta="git add ."
 alias gtc="git commit -m"
 alias gtp="git push"
 alias gtcl="git clone"
+alias gtpl="git pull"
+
