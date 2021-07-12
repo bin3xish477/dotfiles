@@ -33,6 +33,7 @@ _download_dotfiles() {
   wget --queit https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.vimrc -O ~/.vimrc
   #download .tmux.conf
   wget --queit https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.tmux.conf -O ~/.tmux.conf
+  source ~/.zshrc
 }
 
 echo -e "\033[0;31mATTENTION\033[0m: Your dotfiles will be overwritten"
