@@ -1,13 +1,12 @@
 #!/bin/bash
 
-_install_zsh() {
-  sudo apt install git -y
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+_install_dependencies() {
+  sudo apt install git tmux zsh -y
 }
 
 _download_plugins_and_colors() {
   # vim plug
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  curl -sfLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   # get molokai colorscheme for vim
   if [[ -d ~/.vim/colors/ ]]; then
@@ -26,14 +25,15 @@ _download_plugins_and_colors() {
   fi 
 }
 
-_download_dotfiles() {
+_download_dotfiles_and_ohmyzsh() {
   # download .zshrc
-  wget --queit https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.zshrc -O ~/.zshrc
+  wget -q https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.zshrc -O ~/.zshrc
   # download .vimrc
-  wget --queit https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.vimrc -O ~/.vimrc
+  wget -q https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.vimrc -O ~/.vimrc
   #download .tmux.conf
-  wget --queit https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.tmux.conf -O ~/.tmux.conf
-  source ~/.zshrc
+  wget -q https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.tmux.conf -O ~/.tmux.conf
+  sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+  sleep 1 && source ~/.zshrc
 }
 
 echo -e "\033[0;31mATTENTION\033[0m: Your dotfiles will be overwritten"
@@ -41,14 +41,13 @@ read -r -p "Do you wish to proceed? (y/n): " answer
 
 if [[ $answer = "y" ]]; then
   echo -e "\033[0;31mInfo\033[0m: Installing git and zsh"
-  _install_zsh
+  _install_dependencies
   echo -e "\033[0;31mInfo\033[0m: Downloading plugins and colorschemes"
   _download_plugins_and_colors
   sleep 1
-  echo -e "\033[0;31mInfo\033[0m: Downloading and overwritting dotfiles"
-  _download_dotfiles
+  echo -e "\033[0;31mInfo\033[0m: Downloading ohmyzsh and overwritting dotfiles"
+  _download_dotfiles_and_ohmyzsh
 else
   echo -e "\033[0;31mExiting\033[0m: That was a close one, Goodbye!!"
   exit 0
 fi
-
