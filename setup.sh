@@ -1,7 +1,7 @@
 #!/bin/bash
 
 _install_dependencies() {
-  sudo apt install git tmux zsh -y
+  sudo apt install git tmux zsh grc -y
 }
 
 _download_plugins_and_colors() {
