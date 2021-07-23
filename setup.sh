@@ -26,13 +26,14 @@ _download_plugins_and_colors() {
 }
 
 _download_dotfiles_and_ohmyzsh() {
-  # download .zshrc
-  wget -q https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.zshrc -O ~/.zshrc
   # download .vimrc
   wget -q https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.vimrc -O ~/.vimrc
   #download .tmux.conf
   wget -q https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.tmux.conf -O ~/.tmux.conf
+  # install ohmyzsh
   sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+  # download .zshrc
+  wget -q https://raw.githubusercontent.com/binexisHATT/dotfiles/master/.zshrc -O ~/.zshrc
   sleep 1 && source ~/.zshrc
 }
 
