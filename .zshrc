@@ -21,7 +21,7 @@ then
 fi
 
 # aliases (install grc with apt install grc | pacman -S grc)
-alias ps="ps --forest"
+alias ps="grc ps --forest"
 alias curl="curl -s"
 alias cat="bat"
 alias clip="xclip -selection clipboard"
