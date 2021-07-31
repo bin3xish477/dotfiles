@@ -36,7 +36,6 @@ set ft=xxd
 "See invisible characters
 set list listchars=tab:>\ ,trail:+,eol:$
 " set list listchars=trail:-,eol:$
-set cursorcolumn
 " ignore letter case while searching
 set ignorecase
 " use highlighting when doing search
