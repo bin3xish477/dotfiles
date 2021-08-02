@@ -10,7 +10,6 @@ PS1="%B%F{white}›%f%b %U%F{white}%.%f%u %F{yellow}π%f∫ "
 export PATH=/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
-export TERM=xterm-256color
 
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
