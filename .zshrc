@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
 if [[ -z "$TMUX" ]]
 then
-    tmux
+    tmux -2
 fi
 
 # aliases (install grc with apt install grc | pacman -S grc)
