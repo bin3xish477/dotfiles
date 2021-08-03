@@ -122,21 +122,10 @@ nnoremap <leader>md :normal i
   \# Title<cr>o<cr>o<cr>
   \## Subtitle<cr>o<cr>o<cr>
   \## Subtitle<cr>o<cr>o<cr>
-
-" Python Setup PlaceHolder Code
-nnoremap <leader>py :normal i
-  \#!/usr/bin/env python3<esc>o<cr>
-  \def main():<cr>
-  \<tab>pass<esc>o<cr>
-  \<bs>if f"{__name__}" == "__main__":<cr>
-  \<tab>pass<cr><esc>
-
-" Go Setup PlaceHolder Code
-nnoremap <leader>go :normal i
-" finish this!
+  
 " }}}
-" PLUGINS ------------------------------------ {{{
 
+" PLUGINS ------------------------------------ {{{
 if has('win32')
     call plug#begin("F:/Opt/Vim/vim82/plugged")
 else
