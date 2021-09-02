@@ -36,6 +36,8 @@ set ft=xxd
 "See invisible characters
 set list listchars=tab:>\ ,trail:+,eol:$
 " set list listchars=trail:-,eol:$
+" set row highlighting
+set cursorline
 " ignore letter case while searching
 set ignorecase
 " use highlighting when doing search
@@ -49,7 +51,7 @@ endif
 filetype plugin on
 " }}}
 
-" MAPPINGS ----------------------------------- {{{
+" MAPPINGS ---------------------------------- {{{
 
 "make jj do esc"
 inoremap jj <Esc>
@@ -117,15 +119,17 @@ endif
 " exit terminal window with <Esc>
 tnoremap <Esc> <c-\><c-n>:q!<cr>
 
-" MarkDown Setup 
-nnoremap <leader>md :normal i
-  \# Title<cr>o<cr>o<cr>
-  \## Subtitle<cr>o<cr>o<cr>
-  \## Subtitle<cr>o<cr>o<cr>
-  
+" delete entire buffer
+nnoremap <leader>db :normal gg<s-v>Gd<cr>
+
+" delete all lines from current line to first line
+nnoremap <leader>dfl <s-v>ggd<cr>
+" delete all lines from current line to last line
+nnoremap <leader>dll <s-v>Gd<cr>
 " }}}
 
 " PLUGINS ------------------------------------ {{{
+
 if has('win32')
     call plug#begin("F:/Opt/Vim/vim82/plugged")
 else
@@ -166,12 +170,12 @@ endif
 
 " VIMSCRIPT ---------------------------------- {{{
 
-""" set default terminal based on OS"""
+""" set default terminal based on OS
 function SetTerm()
   if has("win32")
     set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
   else
-    set shell=/bin/zsh
+    set shell=$HOME/go/bin/elvish
   endif
 endfunction
 
@@ -213,6 +217,6 @@ augroup END
 " }}}
 
 " -- COLORSCHEME ---------------------------- {{{
-" https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+" https://github.com/tomasr/molokai/blob/master/colors/molokai.vim
 colorscheme molokai
 " }}}
