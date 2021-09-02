@@ -1,3 +1,6 @@
+# Use Elvish package manager module
+use epm
+
 # Set PATH
 paths = [
   /bin
