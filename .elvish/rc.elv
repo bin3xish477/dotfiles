@@ -9,7 +9,7 @@ paths = [
 ]
 
 # Set left prompt
-edit:prompt = { tilde-abbr $pwd; put '❱ ' }
+edit:prompt = { tilde-abbr $pwd; put ' ❱ ' }
 # Set right prompt
 edit:rprompt = (constantly (styled (whoami)✸(hostname) inverse))
 
@@ -17,3 +17,9 @@ edit:rprompt = (constantly (styled (whoami)✸(hostname) inverse))
 fn ls [@args]{
   e:ls --color $@args
 }
+
+fn nmap [@args]{
+  e:grc nmap $@args
+}
+
+edit:insert:binding[Alt-l] = { clear > /dev/tty ; edit:redraw &full=$true }
