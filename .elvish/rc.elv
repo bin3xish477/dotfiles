@@ -4,12 +4,13 @@ paths = [
   /usr/bin
   /usr/sbin
   /usr/local/bin
+  /usr/local/go/bin
   /sbin
   $E:HOME/go/bin
 ]
 
 # Set left prompt
-edit:prompt = { tilde-abbr $pwd; put '> ' }
+edit:prompt = { tilde-abbr $pwd; put '❯ ' }
 # Set right prompt
 edit:rprompt = (constantly (styled (whoami)@(hostname) inverse))
 
@@ -24,3 +25,14 @@ fn id []{ e:grc id }
 fn lsof [@a]{ e:grc lsof $@a }
 
 edit:insert:binding[Alt-l] = { clear > /dev/tty ; edit:redraw &full=$true }
+
+# Go completion
+epm:install                               ^
+  &silent-if-installed=$true              ^
+  github.com/xiaq/edit.elv                ^
+  github.com/zzamboni/elvish-completions
+
+use github.com/xiaq/edit.elv/compl/go
+use github.com/zzamboni/elvish-completions/git
+
+go:apply
