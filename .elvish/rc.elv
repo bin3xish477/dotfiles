@@ -1,4 +1,22 @@
-# Use Elvish package manager module
+echo '
+░░░░░░▄▄▄▄▄▓▓▓▄▄▄░░░░░
+░░░░▄▄▓▓▓▓▓▓▓▓▓▓▓▓▓▄░░░
+░░▄▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▀█▄░
+░▓▓▌▓▓▓░░▒▒▒▒▀(◐)▒▒▒▒▒█▓
+░▓▓▌▓▓░▒▒▓(◐)▓░░░▒▓▓(◐)█▓
+▓▓▌▓▓█▄█▀▄▄░▀░▀▄▄▀░░█░█
+▓▓▌▓▓▀▄█▄█░█▀▄▄▄▄▄▀██░█
+░▓▓▌▓▓░█░███▄█▄█▄███░░█
+░▓▓▌▓▓░█░███████████░░█
+░▓▓▌▓▓░█░███████████░░█
+░▓▓▌▓▓░█░███████████░░█
+░▓▓▌▓▓░▀▀█░█▀█▀█▀███░█
+░░▓▓▌▓▓░░░▀▀▄█▄█▄█▄▀░█
+░░▓▓▌▓▓▓▓▀▀▄▄▄▄▄▄▄▄▄▄▀
+
+Welcome to the Elvish Shell
+'
+
 use epm
 
 # Set PATH
@@ -7,9 +25,9 @@ paths = [
   /usr/bin
   /usr/sbin
   /usr/local/bin
-  /usr/local/go/bin
   /sbin
   $E:HOME/go/bin
+  /usr/local/go/bin
 ]
 
 # Set left prompt
@@ -37,7 +55,5 @@ epm:install                               ^
 
 use github.com/xiaq/edit.elv/compl/go
 use github.com/zzamboni/elvish-completions/git
-use github.com/zzamboni/elvish-completions/builtins
-use github.com/zzamboni/elvish-completions/ssh
 
 go:apply
