@@ -37,5 +37,7 @@ epm:install                               ^
 
 use github.com/xiaq/edit.elv/compl/go
 use github.com/zzamboni/elvish-completions/git
+use github.com/zzamboni/elvish-completions/builtins
+use github.com/zzamboni/elvish-completions/ssh
 
 go:apply
