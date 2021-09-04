@@ -217,6 +217,6 @@ augroup END
 " }}}
 
 " -- COLORSCHEME ---------------------------- {{{
-" https://github.com/tomasr/molokai/blob/master/colors/molokai.vim
+" https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
 colorscheme molokai
 " }}}
