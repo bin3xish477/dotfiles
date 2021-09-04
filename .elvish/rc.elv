@@ -1,6 +1,10 @@
 echo 'Welcome to the Elvish Shell!'
 
 use epm
+use str
+use re
+use file
+use path
 
 # Set PATH
 paths = [
