@@ -31,6 +31,8 @@ fn dt [@a]{ e:date $@a }
 fn netstat [@a]{ e:grc netstat $@a }
 fn id []{ e:grc id }
 fn lsof [@a]{ e:grc lsof $@a }
+fn curl [@a]{ e:curl -s --user-agent 'noleak' $@a }
+fn wget [@a]{ e:wget --user-agent 'noleak' $@a }
 
 # Edit API settings
 # - insert mode bindings
