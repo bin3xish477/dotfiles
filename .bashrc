@@ -5,4 +5,4 @@ then
       tmux -2
 fi
 
-exec $HOME/go/bin/elvish
+$HOME/go/bin/elvish
