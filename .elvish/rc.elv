@@ -33,6 +33,7 @@ fn id []{ e:grc id }
 fn lsof [@a]{ e:grc lsof $@a }
 fn curl [@a]{ e:curl -s --user-agent 'noleak' $@a }
 fn wget [@a]{ e:wget --user-agent 'noleak' $@a }
+fn xclip []{ e:xclip -selection clipboard }
 
 # Edit API settings
 # - insert mode bindings
