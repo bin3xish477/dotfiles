@@ -30,6 +30,7 @@ paths = [
   /sbin
   $E:HOME/go/bin
   /usr/local/go/bin
+  $E:HOME/.local/bin
 ]
 
 # Set left prompt
