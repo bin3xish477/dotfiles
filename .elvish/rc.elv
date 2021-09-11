@@ -68,6 +68,10 @@ edit:insert:binding[Alt-l] = { edit:location:start }
 edit:completion:arg-completer['go'] = (comp:item [arg]{ comp:files $arg })
 edit:completion:arg-completer['python3'] = (comp:item [arg]{ comp:files $arg })
 edit:completion:arg-completer['sudo'] = (comp:item [(e:bash -c 'compgen -abc')])
+# edit:completion:arg-completer[sudo] = [@cmd]{
+#   l = [(str:trim $@cmd ' ' | str:split ' ' (all))]
+#   echo $l
+# }
 
 # - abbreviations
 edit:abbr['>dn'] = '2>/dev/null'
