@@ -59,10 +59,6 @@ fn ls [@_args]{
   } $_args)
 }
 
-fn complete-commands [arg]{
-  e:bash -c 'compgen -cab'
-}
-
 # Edit API settings
 # - insert mode bindings
 edit:insert:binding[Ctrl-l] = { edit:clear }
