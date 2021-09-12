@@ -66,9 +66,19 @@ edit:insert:binding[Ctrl-l] = { edit:clear }
 edit:insert:binding[Alt-l] = { edit:location:start }
 
 # - command completions
-edit:completion:arg-completer['go'] = (comp:item [arg]{ comp:files $arg })
-edit:completion:arg-completer['python3'] = (comp:item [arg]{ comp:files $arg })
-edit:completion:arg-completer['sudo'] = (comp:item [(e:bash -c 'compgen -abc')])
+edit:completion:arg-completer['go'] = (comp:item [@arg]{ comp:files $arg })
+edit:completion:arg-completer['python3'] = (comp:item [@arg]{ comp:files $arg })
+edit:completion:arg-completer['sudo'] = [@arg]{
+  cmd = [(echo $@arg | str:trim (all) ' ' | str:split ' ' (all))]
+  len = (count $cmd)
+  if (== 1 $len) {
+    each [i]{
+      put $i
+    } [(e:bash -c 'compgen -abc')]
+  } else {
+    comp:files $arg[-1]
+  }
+}
 
 # - abbreviations
 edit:abbr['>dn'] = '2>/dev/null'
