@@ -59,6 +59,10 @@ fn ls [@_args]{
       ]
   } $_args)
 }
+# kills all proccesses by process name (doesnt have to be full process name)
+fn killproc [proc_name]{
+  pgrep -a -f $proc_name | eawk [_ 1 @rest]{ echo $1 } | kill (all)
+}
 
 # Edit API settings
 # - insert mode bindings
