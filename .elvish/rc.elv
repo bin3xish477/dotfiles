@@ -1,5 +1,3 @@
-echo 'Welcome to the Elvish Shell!'
-
 use epm
 use str
 use re
@@ -35,7 +33,7 @@ paths = [
 ]
 
 # Set left prompt
-edit:prompt = { put '{{'; tilde-abbr $pwd; put '}} ' }
+edit:prompt = { put '{ ▶ '; put [(str:split '/' (pwd))][-1]; put ' } ' }
 # Set right prompt
 edit:rprompt = (constantly (styled (whoami)@(hostname) inverse))
 
