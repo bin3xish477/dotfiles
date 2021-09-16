@@ -83,6 +83,8 @@ edit:completion:arg-completer['sudo'] = [@arg]{
     comp:files $arg[-1]
   }
 }
+# default completion for files and directories
+edit:completion:arg-completer[''] = $edit:complete-filename~
 
 # - abbreviations
 edit:abbr['>dn'] = '2>/dev/null'
