@@ -33,7 +33,7 @@ paths = [
 ]
 
 # Set left prompt
-edit:prompt = { put '{ ▶ '; put [(str:split '/' (pwd))][-1]; put ' } ' }
+edit:prompt = { tilde-abbr $pwd; put '> ' }
 # Set right prompt
 edit:rprompt = (constantly (styled (whoami)@(hostname) inverse))
 
