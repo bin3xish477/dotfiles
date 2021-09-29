@@ -44,6 +44,7 @@ fn ps [@a]{ e:grc ps --forest $@a }
 fn dt [@a]{ e:date $@a }
 fn netstat [@a]{ e:grc netstat $@a }
 fn id []{ e:grc id }
+fn dig [@a]{ e:grc dig $@a }
 fn lsof [@a]{ e:grc lsof $@a }
 fn curl [@a]{ e:curl -s --user-agent 'noleak' $@a }
 fn wget [@a]{ e:wget --user-agent 'noleak' $@a }
