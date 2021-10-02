@@ -1,6 +1,6 @@
 export PATH=$PATH:$HOME/go/bin/:/usr/local/go/bin/:/$HOME/.local/bin/
 
-alias ls='ls --color'
+alias ls='exa'
 alias dig='grc dig'
 alias ping='grc ping'
 alias curl='curl -s --user-agent noleak'
