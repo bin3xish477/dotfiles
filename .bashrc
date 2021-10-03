@@ -66,3 +66,11 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+if [[ -z "$TMUX" ]]; then
+  tmux -2
+fi
+
+function randstr() {
+  echo $RANDOM | sha512sum | awk '{print $1}' | head -c $1; echo
+}
