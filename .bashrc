@@ -74,3 +74,7 @@ fi
 function randstr() {
   echo $RANDOM | sha512sum | awk '{print $1}' | head -c $1; echo
 }
+
+function genpass() {
+  tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | head -c 13 ; echo
+}
