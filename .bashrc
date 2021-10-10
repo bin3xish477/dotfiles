@@ -78,3 +78,7 @@ function randstr() {
 function genpass() {
   tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | head -c 13 ; echo
 }
+
+function inip() {
+  ip addr show $1 | grep -Po "(?<=inet )[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"
+}
