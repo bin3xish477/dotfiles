@@ -1,4 +1,4 @@
-export PATH=$PATH:$HOME/go/bin/:/usr/local/go/bin/:/$HOME/.local/bin/
+export PATH=$PATH:$HOME/go/bin/:/usr/local/go/bin/:$HOME/.local/bin/
 
 alias ls='exa'
 alias dig='grc dig'
