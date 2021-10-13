@@ -217,6 +217,6 @@ augroup END
 " }}}
 
 " -- COLORSCHEME ---------------------------- {{{
-" https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
-colorscheme molokai
+colorscheme gruvbox
+set background=dark
 " }}}
