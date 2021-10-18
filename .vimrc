@@ -175,7 +175,7 @@ function SetTerm()
   if has("win32")
     set shell=C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
   else
-    set shell=$HOME/go/bin/elvish
+    set shell=/bin/bash
   endif
 endfunction
 
