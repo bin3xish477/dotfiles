@@ -82,3 +82,9 @@ function genpass() {
 function inip() {
   ip addr show $1 | grep -Po "(?<=inet )[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"
 }
+
+# renames all files and directories in specified path to lowercase
+# must have the tool "rename" installed: sudo apt install rename
+function to_lowercase() {
+   find $1 -depth | xargs -n 1 -d '\n' rename 's/(.*)\/([^\/]*)/$1\/\L$2/' {} \;
+}
