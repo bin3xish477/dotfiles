@@ -144,12 +144,11 @@ Plug 'maxboisvert/vim-simple-complete'
 Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " emmet
@@ -217,6 +216,7 @@ augroup END
 " }}}
 
 " -- COLORSCHEME ---------------------------- {{{
-colorscheme gruvbox
 set background=dark
+set termguicolors
+colorscheme nord
 " }}}
