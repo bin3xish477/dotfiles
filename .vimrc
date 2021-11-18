@@ -126,6 +126,9 @@ nnoremap <leader>db :normal gg<s-v>Gd<cr>
 nnoremap <leader>dfl <s-v>ggd<cr>
 " delete all lines from current line to last line
 nnoremap <leader>dll <s-v>Gd<cr>
+
+" command abbreviation for :tabnew -> :tn
+ca tn tabnew
 " }}}
 
 " PLUGINS ------------------------------------ {{{
@@ -148,7 +151,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
-Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " emmet
@@ -233,7 +235,8 @@ augroup END
 " }}}
 
 " -- COLORSCHEME ---------------------------- {{{
+" molokai.vim -> https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
 set background=dark
 set termguicolors
-colorscheme nord
+colorscheme molokai
 " }}}
