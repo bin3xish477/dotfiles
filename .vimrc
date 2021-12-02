@@ -126,8 +126,11 @@ nnoremap <leader>db :normal gg<s-v>Gd<cr>
 nnoremap <leader>dfl <s-v>ggd<cr>
 " delete all lines from current line to last line
 nnoremap <leader>dll <s-v>Gd<cr>
+" new tab with leader key
+nnoremap <leader>nt :tabnew<cr>
+" close tab with leader key
+nnoremap <leader>ct :tabclose<cr>
 
-" command abbreviation for :tabnew -> :tn
 ca tn tabnew
 " }}}
 
@@ -151,6 +154,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
+Plug 'ryanoasis/vim-devicons'
+Plug 'pacha/vem-tabline'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
 call plug#end()
 
 " emmet
@@ -182,6 +192,14 @@ if has('win32')
   let g:gitgutter_git_executable = 'F:\opt\Git\Git\bin\git.exe'
 else
   let g:gitgutter_git_executable = '/usr/bin/git'
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
 endif
 
 " }}}
@@ -235,7 +253,6 @@ augroup END
 " }}}
 
 " -- COLORSCHEME ---------------------------- {{{
-" molokai.vim -> https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
 set background=dark
 set termguicolors
 colorscheme molokai
