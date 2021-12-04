@@ -88,3 +88,7 @@ function inip() {
 function to_lowercase() {
    find $1 -depth | xargs -n 1 -d '\n' rename 's/(.*)\/([^\/]*)/$1\/\L$2/' {} \;
 }
+
+function ssh_agent_setup() {
+  eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github &>/dev/null
+}
