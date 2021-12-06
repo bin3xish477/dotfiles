@@ -1,12 +1,5 @@
 export PATH=$PATH:$HOME/go/bin/:/usr/local/go/bin/:$HOME/.local/bin/
 
-alias ls='exa'
-alias dig='grc dig'
-alias ping='grc ping'
-alias curl='curl -s --user-agent noleak'
-alias wget='wget -q --user-agent noleak'
-alias lsof='grc lsof'
-
 case $- in
     *i*) ;;
       *) return;;
