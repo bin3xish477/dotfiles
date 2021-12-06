@@ -4,12 +4,12 @@ RUN apk add vim openssh curl wget git tmux npm openrc zsh
 
 RUN rc-update add sshd
 
-COPY $HOME/.vimrc ~/.vimrc
-COPY $HOME/.ssh/github ~/.ssh/github
+COPY $HOME/.vimrc /root/.vimrc
+COPY $HOME/.ssh/github /root/.ssh/github
+COPY $HOME/.tmux.conf /root/.tmux.conf
+RUN sed -i 's/\/bin\/bash/\/bin\/zsh/g' /root/.tmux.conf
 
-VOLUME ~/Documents/ /projects/
-
-RUN zsh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ||true
+RUN zsh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" || true
 RUN sed -i 's/robbyrussell/afowler/g' ~/.zshrc
 
 RUN ln -f /bin/zsh /bin/sh
