@@ -71,24 +71,32 @@ if [[ -z "$TMUX" ]]; then
   tmux -2
 fi
 
-function randstr() {
-  echo $RANDOM | sha512sum | awk '{print $1}' | head -c $1; echo
+alias ls='exa'
+alias dig='grc dig'
+alias ping='grc ping'
+alias curl='curl -s --user-agent noleak'
+alias wget='wget -q --user-agent noleak'
+alias lsof='grc lsof'
+alias mk='make'
+alias rm_containers='docker container rm $(docker container ls -qa)'
+alias rm_images='docker image prune -af'
+alias go_env='docker exec -it go-env zsh'
+alias go_run_env='docker run --name go-env go-dev-env'
+alias go_start_env='docker start go-env'
+alias ssh_agent_setup='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github &>/dev/null'
+
+randstr() {
+echo $RANDOM | sha512sum | awk '{print $1}' | head -c $1; echo
 }
 
-function genpass() {
-  tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | head -c 13 ; echo
+genpass() {
+tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | head -c $1 ; echo
 }
 
-function inip() {
-  ip addr show $1 | grep -Po "(?<=inet )[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"
+inip() {
+ip addr show $1 | grep -Po "(?<=inet )[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"
 }
 
-# renames all files and directories in specified path to lowercase
-# must have the tool "rename" installed: sudo apt install rename
-function to_lowercase() {
-   find $1 -depth | xargs -n 1 -d '\n' rename 's/(.*)\/([^\/]*)/$1\/\L$2/' {} \;
-}
-
-function ssh_agent_setup() {
-  eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github &>/dev/null
+to_lowercase() {
+find $1 -depth | xargs -n 1 -d '\n' rename 's/(.*)\/([^\/]*)/$1\/\L$2/' {} \;
 }
