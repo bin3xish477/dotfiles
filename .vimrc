@@ -141,8 +141,9 @@ if has('win32')
 else
     call plug#begin("~/.vim/plugged")
 endif
-" install Pyright for coc.vim, Python code completion
-" :CocInstall coc-pyright
+
+let g:plug_url_format = 'git@github.com:%s.git'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
