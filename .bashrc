@@ -1,4 +1,5 @@
 export PATH=$PATH:$HOME/go/bin/:/usr/local/go/bin/:$HOME/.local/bin/
+export TERM=xterm-256color
 
 case $- in
     *i*) ;;
