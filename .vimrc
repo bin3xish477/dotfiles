@@ -157,11 +157,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
 Plug 'ryanoasis/vim-devicons'
 Plug 'pacha/vem-tabline'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 " emmet
@@ -254,7 +250,7 @@ augroup END
 " }}}
 
 " -- COLORSCHEME ---------------------------- {{{
-set background=dark
 set termguicolors
-colorscheme molokai
+set background=dark
+colorscheme PaperColor
 " }}}
