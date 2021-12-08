@@ -44,6 +44,8 @@ set ignorecase
 set hlsearch
 " don't wrap lines
 set nowrap
+set laststatus=2
+
 if has('gui_running')
   set guifont=Cascadia\ Mono:h11
 endif
@@ -141,9 +143,8 @@ if has('win32')
 else
     call plug#begin("~/.vim/plugged")
 endif
-
-let g:plug_url_format = 'git@github.com:%s.git'
-
+" install Pyright for coc.vim, Python code completion
+" :CocInstall coc-pyright
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
@@ -156,9 +157,13 @@ Plug 'sheerun/vim-polyglot'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
 Plug 'ryanoasis/vim-devicons'
-Plug 'pacha/vem-tabline'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'mkitt/tabline.vim'
 call plug#end()
+
+let g:lightline = {
+        \ 'colorscheme': 'PaperColor',
+      \ }
 
 " emmet
 let g:user_emmet_leader_key="<"
@@ -189,14 +194,6 @@ if has('win32')
   let g:gitgutter_git_executable = 'F:\opt\Git\Git\bin\git.exe'
 else
   let g:gitgutter_git_executable = '/usr/bin/git'
-endif
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  let g:coc_global_extensions += ['coc-eslint']
 endif
 
 " }}}
