@@ -44,8 +44,6 @@ set ignorecase
 set hlsearch
 " don't wrap lines
 set nowrap
-set laststatus=2
-
 if has('gui_running')
   set guifont=Cascadia\ Mono:h11
 endif
@@ -134,6 +132,9 @@ nnoremap <leader>nt :tabnew<cr>
 nnoremap <leader>ct :tabclose<cr>
 
 ca tn tabnew
+
+" fzf fuzzy find remap
+nnoremap <leader>ff :Files<cr>
 " }}}
 
 " PLUGINS ------------------------------------ {{{
@@ -143,8 +144,10 @@ if has('win32')
 else
     call plug#begin("~/.vim/plugged")
 endif
-" install Pyright for coc.vim, Python code completion
-" :CocInstall coc-pyright
+
+" for cloning repositories via SSH
+let g:plug_url_format = 'git@github.com:%s.git'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'itchyny/lightline.vim'
@@ -157,13 +160,11 @@ Plug 'sheerun/vim-polyglot'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
 Plug 'ryanoasis/vim-devicons'
+Plug 'pacha/vem-tabline'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'mkitt/tabline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
-
-let g:lightline = {
-        \ 'colorscheme': 'PaperColor',
-      \ }
 
 " emmet
 let g:user_emmet_leader_key="<"
@@ -188,6 +189,8 @@ let g:go_auto_type_info =1
 let g:go_fmt_autosave = 1
 let g:go_mod_fmt_autosave = 1
 let g:go_gopls_enabled = 1
+
+let $FZF_DEFAULT_COMMAND = 'rg --files --follow --no-ignore-vcs'
 
 " gitgutter specify git executable path
 if has('win32')
