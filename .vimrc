@@ -190,7 +190,7 @@ let g:go_fmt_autosave = 1
 let g:go_mod_fmt_autosave = 1
 let g:go_gopls_enabled = 1
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --follow --no-ignore-vcs'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --no-ignore-vcs'
 
 " gitgutter specify git executable path
 if has('win32')
