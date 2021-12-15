@@ -192,7 +192,7 @@ let g:go_gopls_enabled = 1
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --no-ignore-vcs'
 " j = down, k = up, ctrl+j = down in preview, ctrl+k = up in preview
-let $FZF_DEFAULT_OPTS = '--bind j:down,k:up,ctrl-j:preview-down,ctrl-k:preview-up'
+let $FZF_DEFAULT_OPTS = '--bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up'
 
 " gitgutter specify git executable path
 if has('win32')
