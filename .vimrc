@@ -146,7 +146,7 @@ else
 endif
 
 " for cloning repositories via SSH
-let g:plug_url_format = 'git@github.com:%s.git'
+" let g:plug_url_format = 'git@github.com:%s.git'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
