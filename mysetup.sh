@@ -14,7 +14,7 @@ main() {
     sed -i 's/bash/zsh/g' "$HOME/.tmux.conf"
   fi
   
-  mkdir ~/.tmux/plugins
+  mkdir -p ~/.tmux/plugins
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   echo -e "==> cloning tmux plugin manager..."
 }
