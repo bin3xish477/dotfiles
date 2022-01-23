@@ -13,6 +13,10 @@ main() {
   if [[ "$SHELL" =~ "zsh" ]]; then
     sed -i 's/bash/zsh/g' "$HOME/.tmux.conf"
   fi
+  
+  mkdir ~/.tmux/plugins
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  echo -e "==> cloning tmux plugin manager..."
 }
 
 install_vimplug() {
