@@ -2,7 +2,7 @@
 
 ### Quick Setup
 
-```
+```bash
 curl -s https://raw.githubusercontent.com/bin3xish477/dotfiles/master/mysetup.sh | bash
 
 # install Node
