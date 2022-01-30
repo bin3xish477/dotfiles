@@ -3,13 +3,12 @@
 _main() {
   _install_vimplug
   _setup_go_environment
-  echo -e "==> installed vim plug..."
 
   curl -s -o "$HOME/.vimrc" "https://raw.githubusercontent.com/bin3xish477/dotfiles/master/.vimrc"
-  echo -e "==> downloaded vimrc file..."
+  echo -e "==> downloading vimrc file..."
 
   curl -s -o "$HOME/.tmux.conf" "https://raw.githubusercontent.com/bin3xish477/dotfiles/master/.tmux.conf"
-  echo -e "==> downloaded tmux config file..."
+  echo -e "==> downloading tmux config file..."
 
   if [[ "$SHELL" =~ "zsh" ]]; then
     sed -i 's/bash/zsh/g' "$HOME/.tmux.conf"
@@ -21,6 +20,7 @@ _main() {
 }
 
 _install_vimplug() {
+  echo -e "==> installing vim plug..."
   curl -s -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 }
 
