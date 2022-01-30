@@ -1,7 +1,8 @@
 #! /usr/bin/env bash
 
-main() {
-  install_vimplug
+_main() {
+  _install_vimplug
+  _setup_go_environment
   echo -e "==> installed vim plug..."
 
   curl -s -o "$HOME/.vimrc" "https://raw.githubusercontent.com/bin3xish477/dotfiles/master/.vimrc"
@@ -19,10 +20,19 @@ main() {
   echo -e "==> cloning tmux plugin manager..."
 }
 
-install_vimplug() {
+_install_vimplug() {
   curl -s -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 }
 
-main
+_setup_go_environment() {
+  echo -e "==> setting up Go environment..."
+  if [[ -f "$HOME/.bashrc" ]]; then
+    echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/' >> $HOME/.bashrc
+  elif [[ -f "$HOME/.zshrc" ]]; then
+    echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/' >> $HOME/.zshrc
+  fi
+}
+
+_main
 
 echo "==> setup complete..."
