@@ -28,8 +28,10 @@ _setup_go_environment() {
   echo -e "==> setting up Go environment..."
   if [[ -f "$HOME/.bashrc" ]]; then
     echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/' >> $HOME/.bashrc
+    source $HOME/.bashrc
   elif [[ -f "$HOME/.zshrc" ]]; then
     echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/' >> $HOME/.zshrc
+    source $HOME/.zshrc
   fi
 }
 
