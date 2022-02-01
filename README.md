@@ -25,8 +25,8 @@ EOF
 git config --global user.name ''
 git config --global user.email ''
 
-git config --global color.ui true
-git config --global credential.helper "cache --timeout=43200"
+git config --global color.ui false
+git config --global credential.helper "cache --timeout=43200"      # save credentials for a longer period of time
 
-git config --global core.pager 'vim -R -'
+git config --global core.pager 'vim -R -'                          # use vim for viewing git stuff
 ```
