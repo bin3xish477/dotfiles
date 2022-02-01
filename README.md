@@ -28,5 +28,5 @@ git config --global user.email ''
 git config --global color.ui true
 git config --global credential.helper "cache --timeout=43200"
 
-git config --global core.pager 'vim -'
+git config --global core.pager 'vim -R -'
 ```
