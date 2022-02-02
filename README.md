@@ -18,15 +18,3 @@ MACAGENT='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KH
 GOOGLEBOT='Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
 EOF
 ```
-
-### Git Config Options
-
-```bash
-git config --global user.name ''
-git config --global user.email ''
-
-git config --global color.ui false
-git config --global credential.helper "cache --timeout=43200"      # save credentials for a longer period of time
-
-git config --global core.pager 'vim -R -'                          # use vim for viewing git stuff
-```
