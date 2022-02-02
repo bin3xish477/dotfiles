@@ -3,6 +3,7 @@
 _main() {
   _install_vimplug
   _setup_go_environment
+  _setup_git_global_config
 
   curl -s -o "$HOME/.vimrc" "https://raw.githubusercontent.com/bin3xish477/dotfiles/master/.vimrc"
   echo -e "==> downloading vimrc file..."
@@ -33,6 +34,10 @@ _setup_go_environment() {
     echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin/' >> $HOME/.zshrc
     source $HOME/.zshrc
   fi
+}
+
+_setup_git_global_config() {
+  echo -e "==> setting up global Git configuration..."
 }
 
 _main
