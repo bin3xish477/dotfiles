@@ -38,6 +38,11 @@ _setup_go_environment() {
 
 _setup_git_global_config() {
   echo -e "==> setting up global Git configuration..."
+  git config --global user.name 'Alexis Rodriguez'
+  git config --global user.email 'rodriguez10011999@gmail.com'
+  git config --global color.ui false
+  git config --global credential.helper "cache --timeout=43200"
+  git config --global core.pager 'vim -R -'
 }
 
 _main
