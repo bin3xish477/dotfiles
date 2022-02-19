@@ -16,8 +16,8 @@ _main() {
     sed -i 's/bash/zsh/g' "$HOME/.tmux.conf"
   fi
   
-  mkdir -p ~/.tmux/plugins
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  mkdir -p $HOME/.tmux/plugins
+  git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
   echo -e "==> cloning tmux plugin manager..."
 }
 
@@ -50,6 +50,12 @@ _setup_git_global_config() {
   git config --global color.ui false
   git config --global credential.helper "cache --timeout=43200"
   git config --global core.pager 'vim -R -'
+}
+
+_setup_aliases() {
+  echo -e "==> setting up your aliases..."
+  echo 'alias cat="bat --plain --paging=never"' >> $HOME/.bashrc
+  source $HOME/.bashrc
 }
 
 _main
