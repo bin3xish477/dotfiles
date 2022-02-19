@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 
 _main() {
+  _install_node
   _install_vimplug
   _setup_go_environment
   _setup_git_global_config
@@ -18,6 +19,12 @@ _main() {
   mkdir -p ~/.tmux/plugins
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   echo -e "==> cloning tmux plugin manager..."
+}
+
+_install_node() {
+  echo -e "==> installing nodejs..."
+  curl -fsSL https://deb.nodesource.com/setup_17.x | sudo bash -
+  sudo apt install -y nodejs
 }
 
 _install_vimplug() {
