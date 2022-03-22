@@ -9,6 +9,7 @@ alias wget="wget -q --user-agent $GOOGLEBOT"
 alias nmap="nmap --script-args=\"http.useragent='$GOOGLEBOT'\""
 alias lsof='grc lsof'
 alias ssh_agent_init='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github &>/dev/null'
+alias nf="nmap-formatter --skip-metrics --skip-traceroute --skip-summary"
 
 randstr() {
    echo $RANDOM | sha512sum | awk '{print $1}' | head -c $1; echo
