@@ -163,6 +163,7 @@ Plug 'pacha/vem-tabline'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " emmet
