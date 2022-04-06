@@ -19,5 +19,6 @@ EOF
 ### Favorites Zsh Themes
 
 ```
+refined
 re5et
 ```
