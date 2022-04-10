@@ -172,6 +172,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'romgrk/barbar.nvim'
 Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
+Plug 'Avimitin/nerd-galaxyline'
 call plug#end()
 
 " emmet
@@ -263,7 +264,7 @@ augroup filetype_vim
 augroup END
 " }}}
 
-" -- COLORSCHEME---------------------------- {{{
+" -- COLORSCHEME/THEMES---------------------------- {{{
 set termguicolors
 let g:tokyonight_style = "night"
 colorscheme tokyonight
