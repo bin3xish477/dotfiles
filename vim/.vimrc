@@ -25,7 +25,7 @@ if has('win32')
 else
   set undodir=~/.undodir
 endif
-set encoding=utf-8
+set encoding=UTF-8
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -126,15 +126,19 @@ nnoremap <leader>db :normal gg<s-v>Gd<cr>
 nnoremap <leader>dfl <s-v>ggd<cr>
 " delete all lines from current line to last line
 nnoremap <leader>dll <s-v>Gd<cr>
-" new tab with leader key
-nnoremap <leader>nt :tabnew<cr>
-" close tab with leader key
-nnoremap <leader>ct :tabclose<cr>
-
-ca tn tabnew
 
 " fzf fuzzy find remap
 nnoremap <leader>ff :Files<cr>
+
+" nvim-tree normal mode remaps
+nnoremap <leader>n :NvimTreeToggle<cr>
+nnoremap <leader>r :NvimTreeRefresh<cr>
+nnoremap <leader>tf :NvimTreeFindFile<cr>
+
+nnoremap <leader>bp :BufferPrevious<cr>
+nnoremap <leader>bn :BufferNext<cr>
+nnoremap <leader>bc :BufferClose<cr>
+
 " }}}
 
 " PLUGINS ------------------------------------ {{{
@@ -149,8 +153,6 @@ endif
 " let g:plug_url_format = 'git@github.com:%s.git'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdcommenter'
-Plug 'itchyny/lightline.vim'
 Plug 'maxboisvert/vim-simple-complete'
 Plug 'airblade/vim-gitgutter'
 Plug 'mattn/emmet-vim'
@@ -158,12 +160,18 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hashivim/vim-terraform'
-Plug 'ryanoasis/vim-devicons'
-Plug 'pacha/vem-tabline'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'numToStr/Comment.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'romgrk/barbar.nvim'
+Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 call plug#end()
 
 " emmet
@@ -193,6 +201,10 @@ let g:go_gopls_enabled = 1
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --no-ignore-vcs'
 " j = down, k = up, ctrl+j = down in preview, ctrl+k = up in preview
 let $FZF_DEFAULT_OPTS = '--bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up'
+
+lua require('Comment').setup()
+lua require('nvim-tree').setup()
+lua require('nvim-web-devicons').setup()
 
 " gitgutter specify git executable path
 if has('win32')
@@ -251,8 +263,9 @@ augroup filetype_vim
 augroup END
 " }}}
 
-" -- COLORSCHEME ---------------------------- {{{
+" -- COLORSCHEME---------------------------- {{{
 set termguicolors
+let g:tokyonight_style = "night"
+colorscheme tokyonight
 set background=dark
-colorscheme PaperColor
 " }}}
