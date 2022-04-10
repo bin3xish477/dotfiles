@@ -1,5 +1,3 @@
-// install ccls with sudo apt install ccls
-
 {
   "languageserver": {
     "ccls": {
