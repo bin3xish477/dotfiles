@@ -15,10 +15,3 @@ MACAGENT='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KH
 GOOGLEBOT='Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
 EOF
 ```
-
-### Favorites Zsh Themes
-
-```
-refined
-re5et
-```
