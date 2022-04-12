@@ -213,6 +213,9 @@ require('nvim-tree').setup({
     width = 30,
     relativenumber = true
   },
+  filters = {
+    dotfiles = true
+  },
   actions = {
     open_file = {
       resize_window = true
