@@ -204,7 +204,23 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --no-ignore-vcs'
 let $FZF_DEFAULT_OPTS = '--bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up'
 
 lua require('Comment').setup()
-lua require('nvim-tree').setup()
+
+lua << EOF
+require('nvim-tree').setup({
+  open_on_setup = true,
+  open_on_tab = false,
+  view = {
+    width = 30,
+    relativenumber = true
+  },
+  actions = {
+    open_file = {
+      resize_window = true
+    }
+  }
+})
+EOF
+
 lua require('nvim-web-devicons').setup()
 
 " gitgutter specify git executable path
@@ -270,3 +286,4 @@ let g:tokyonight_style = "night"
 colorscheme tokyonight
 set background=dark
 " }}}
+      
