@@ -144,9 +144,9 @@ nnoremap <leader>bc :BufferClose<cr>
 " PLUGINS ------------------------------------ {{{
 
 if has('win32')
-    call plug#begin("F:/Opt/Vim/vim82/plugged")
+    call plug#begin("F:/Opt/Vim/vim82/plugins")
 else
-    call plug#begin("~/.vim/plugged")
+    call plug#begin("~/.config/nvim/plugins")
 endif
 
 " for cloning repositories via SSH
@@ -289,4 +289,3 @@ let g:tokyonight_style = "night"
 colorscheme tokyonight
 set background=dark
 " }}}
-      
