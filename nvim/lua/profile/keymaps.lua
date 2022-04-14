@@ -1,3 +1,12 @@
+--[[
+Keymapping Modes:
+  - Normal Mode = "n"
+  - Insert Mode = "i"
+  - Visual Mode = "v"
+  - Visual Block Mode = "x"
+  - Command Mode = "c"
+--]]
+
 local opts = {
   noremap = true, -- non-recursive mapping
   silent = true,
