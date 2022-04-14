@@ -18,6 +18,11 @@ vim.opt.pumheight = 10                  -- pop-up menu height
 vim.opt.conceallevel = 0                -- show tilde's in Markdown!
 vim.opt.tabstop = 2                         -- 1 tab = 2 spaces
 vim.opt.cmdheight = 2                     -- more spaces for command-line mode
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
+
+vim.g.tokyonight_style = "night"
+-- vim.cmd 'colorscheme tokyonight'
 
 -- if vim.fn.has('win32') then
 -- vim.opt.undodir = "C:\\Users\\rodri\\.undodir"
