@@ -7,7 +7,7 @@ local options = {
         clipboard = "unnamedplus",
         ignorecase = true,
         undofile = true,
-        undodir = "~/.undodir",
+        undodir = string.format("%s/.undodir", vim.env.HOME),
         encoding = "UTF-8",
         pastetoggle = "<F2>",
         shiftwidth = 2,
@@ -20,15 +20,15 @@ local options = {
         tabstop = 2,
         cmdheight = 2,
         termguicolors = true,
-        background = "dark"
+        background = "dark",
 }
 
--- setting all options from `options` table
 for k,v in pairs(options) do
   vim.opt[k] = v
 end
 
 vim.g.tokyonight_style = "night"
+
 -- vim.cmd 'colorscheme tokyonight'
 
 -- if vim.fn.has('win32') then
