@@ -24,7 +24,7 @@ local options = {
 }
 
 -- setting all options from `options` table
-for ,v in pairs(options) do
+for k,v in pairs(options) do
   vim.opt[k] = v
 end
 
