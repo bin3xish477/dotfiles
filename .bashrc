@@ -23,3 +23,5 @@ genpass() {
 to_lowercase() {
    find $1 -depth | xargs -n 1 -d '\n' rename 's/(.*)\/([^\/]*)/$1\/\L$2/' {} \;
 }
+
+if [ "$TMUX" = "" ]; then tmux new-session -s main; fi
