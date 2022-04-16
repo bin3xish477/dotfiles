@@ -19,20 +19,57 @@ local options = {
         conceallevel = 0,
         tabstop = 2,
         cmdheight = 2,
+  splitright = true,
+  splitbelow = true,
         termguicolors = true,
         background = "dark",
+  list = true,
+  listchars = {
+    eol = "$",
+    trail = "+",
+    tab = "> "
+  },
+  shell = "/bin/bash",
 }
 
 for k,v in pairs(options) do
   vim.opt[k] = v
 end
 
+-- FZF
+vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --no-ignore-vcs"
+vim.env.FZF_DEFAULT_OPTS = "--bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up"
+
+-- Emmet
+vim.g.user_emmet_leader_key = ","
+
+-- Gitgutter
+vim.g.gitgutter_git_executable = "/usr/bin/git"
+
+-- VimGo
+vim.g.go_def_mode='gopls'
+vim.g.go_info_mode='gopls'
+vim.g.go_highlight_structs = 1
+vim.g.go_highlight_methods = 1
+vim.g.go_highlight_functions = 1
+vim.g.go_highlight_function_calls = 1
+vim.g.go_highlight_function_parameters = 1
+vim.g.go_highlight_operators = 1
+vim.g.go_highlight_types = 1
+vim.g.go_highlight_fields = 1
+vim.g.go_highlight_build_constraints = 1
+vim.g.go_highlight_generate_tags = 1
+vim.g.go_highlight_format_strings = 1
+vim.g.go_highlight_variable_declarations = 1
+vim.g.go_highlight_variable_assignments = 1
+vim.g.go_auto_type_info =1
+vim.g.go_fmt_autosave = 1
+vim.g.go_mod_fmt_autosave = 1
+vim.g.go_gopls_enabled = 1
+
+-- Tokyonight
 vim.g.tokyonight_style = "night"
+vim.cmd 'colorscheme tokyonight'
 
--- vim.cmd 'colorscheme tokyonight'
-
--- if vim.fn.has('win32') then
--- vim.opt.undodir = "C:\\Users\\rodri\\.undodir"
--- else
--- vim.opt.undodir = "~/.undodir"
--- end
+-- PaperColor
+--vim.cmd 'colorscheme PaperColor'
