@@ -11,8 +11,12 @@ local use = packer.use
 
 packer.reset()
 packer.startup(function()
-  use 'junegunn/fzf.vim'
-  use 'numToStr/Comment.nvim'
+  use {
+    'numToStr/Comment.nvim',
+    config = function() require('Comment').setup {
+      padding = false,
+    } end
+  }
   use 'romgrk/barbar.nvim'
   use 'Yggdroot/indentLine'
   use 'tpope/vim-fugitive'
@@ -20,6 +24,9 @@ packer.startup(function()
   use 'jiangmiao/auto-pairs'
   use 'airblade/vim-gitgutter'
   use 'maxboisvert/vim-simple-complete'
+  use 'mattn/emmet-vim'
+  use 'NLKNguyen/papercolor-theme'
+  --use ''
 
   use {
     'wbthomason/packer.nvim',
@@ -34,7 +41,22 @@ packer.startup(function()
       requires = {
         'kyazdani42/nvim-web-devicons',
       },
-      config = function() require'nvim-tree'.setup {} end
+      config = function() require('nvim-tree').setup {
+        open_on_setup = true,
+        open_on_tab = false,
+        view = {
+          width = 30,
+          relativenumber = true,
+        },
+        filters = {
+          dotfiles = true,
+        },
+        actions = {
+          open_file = {
+            resize_window = true,
+          }
+        }
+      } end
   }
   use {
     'folke/tokyonight.nvim',
