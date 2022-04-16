@@ -38,7 +38,7 @@ keymap("n", "<leader>dfl", "<s-v>ggd<cr>", opts)
 keymap("n", "<leader>", "<s-v>Gd<cr>", opts)
 
 -- FZF
-keymap("n", "<leader>ff", ":Files<cr>", opts)
+keymap("n", "<leader>ff", ":FZF<cr>", opts)
 
 -- NvimTree
 keymap("n", "<leader>t", ":NvimTreeToggle<cr>", opts)
