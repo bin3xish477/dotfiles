@@ -1,4 +1,4 @@
-packer = require('packer')
+local packer = require('packer')
 
 packer.init {
   display = {
@@ -26,6 +26,8 @@ packer.startup(function()
   use 'maxboisvert/vim-simple-complete'
   use 'mattn/emmet-vim'
   use 'NLKNguyen/papercolor-theme'
+  use 'glepnir/galaxyline.nvim'
+  use 'Avimitin/nerd-galaxyline'
   --use ''
 
   use {
