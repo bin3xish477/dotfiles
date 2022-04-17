@@ -52,6 +52,4 @@ keymap("n", "<leader>bc", ":BufferClose<cr>", opts)
 -- exit terminal with ESC
 keymap("t", "<esc>", "<c-\\><c-n>:q!<esc>", opts)
 
-keymap("n", "ev", ":split $MYVIMRC<cr>", opts)
-keymap("n", "sv", ":w<cr> :source $MYVIMRC<cr> :q<cr>", opts)
 -- keymap("", "", "", opts)
