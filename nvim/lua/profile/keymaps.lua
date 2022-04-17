@@ -35,7 +35,7 @@ keymap("n", "<C-Right>", ":vertical resize -2<cr>", opts)
 
 keymap("n", "<leader>db", ":normal gg<s-v>Gd<cr>", opts)
 keymap("n", "<leader>dfl", "<s-v>ggd<cr>", opts)
-keymap("n", "<leader>", "<s-v>Gd<cr>", opts)
+keymap("n", "<leader>dll", "<s-v>Gd<cr>", opts)
 
 -- FZF
 keymap("n", "<leader>ff", ":FZF<cr>", opts)
