@@ -38,7 +38,7 @@ end
 
 -- FZF
 vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --no-ignore-vcs --fixed-strings"
-vim.env.FZF_DEFAULT_OPTS = "--bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up"
+vim.env.FZF_DEFAULT_OPTS = [[--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up]]
 
 -- Emmet
 vim.g.user_emmet_leader_key = ","
