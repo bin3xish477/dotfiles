@@ -66,6 +66,6 @@ packer.startup(function()
   }
   use {
     'junegunn/fzf',
-    run = ':call fzf#install()'
+    run = './install --bin',
   }
 end)
