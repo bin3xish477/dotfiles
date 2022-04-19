@@ -37,7 +37,7 @@ for k,v in pairs(options) do
 end
 
 -- FZF
-vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --no-ignore-vcs"
+vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --no-ignore-vcs --fixed-strings"
 vim.env.FZF_DEFAULT_OPTS = "--bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up"
 
 -- Emmet
@@ -67,9 +67,18 @@ vim.g.go_fmt_autosave = 1
 vim.g.go_mod_fmt_autosave = 1
 vim.g.go_gopls_enabled = 1
 
--- Tokyonight
-vim.g.tokyonight_style = "night"
-vim.cmd 'colorscheme tokyonight'
+--[[
+the following code alternates between the tokyonight
+and papercolor colorschemes using even or odd numbers
+]]
+math.randomseed(os.time()) --set seed to current time
+local rand = math.random(1000)
 
--- PaperColor
---vim.cmd 'colorscheme PaperColor'
+if (rand % 2 == 0) then
+  --Tokyonight
+  vim.g.tokyonight_style = "night"
+  vim.cmd 'colorscheme tokyonight'
+else
+  --PaperColor
+  vim.cmd 'colorscheme PaperColor'
+end
