@@ -1,5 +1,6 @@
 local packer = require('packer')
 
+
 packer.init {
   display = {
     open_fn = require('packer.util').float,
@@ -20,7 +21,6 @@ packer.startup(function()
   use 'romgrk/barbar.nvim'
   use 'Yggdroot/indentLine'
   use 'tpope/vim-fugitive'
-  use 'preservim/vim-markdown'
   use 'jiangmiao/auto-pairs'
   use 'airblade/vim-gitgutter'
   use 'maxboisvert/vim-simple-complete'
@@ -28,6 +28,26 @@ packer.startup(function()
   use 'NLKNguyen/papercolor-theme'
   use 'glepnir/galaxyline.nvim'
   use 'Avimitin/nerd-galaxyline'
+  use {
+    'ekickx/clipboard-image.nvim',
+    config = function() require('clipboard-image').setup({
+      default = {
+        img_dir = "/img",
+        img_dir_txt = "img",
+        img_name = function ()
+          vim.fn.inputsave()
+          local name = vim.fn.input('Image name: ')
+          vim.fn.inputrestore()
+
+          if name == nil or name == '' then
+            return os.date('%y-%m-%d-%H-%M-%S')
+          end
+          return name
+        end,
+      }
+    }) end
+  }
+
   --use ''
 
   use {
