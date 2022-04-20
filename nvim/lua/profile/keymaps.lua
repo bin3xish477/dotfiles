@@ -52,4 +52,5 @@ keymap("n", "<leader>bc", ":BufferClose<cr>", opts)
 -- exit terminal with ESC
 keymap("t", "<esc>", "<c-\\><c-n>:q!<esc>", opts)
 
+keymap("i", "<leader>pi", "<esc>:PasteImg<cr>", opts)
 -- keymap("", "", "", opts)
