@@ -28,6 +28,13 @@ packer.startup(function()
   use 'NLKNguyen/papercolor-theme'
   use 'glepnir/galaxyline.nvim'
   use 'Avimitin/nerd-galaxyline'
+  --use ''
+
+  use {
+    'fatih/vim-go',
+    run = ':GoInstallBinaries',
+  }
+
   use {
     'ekickx/clipboard-image.nvim',
     config = function() require('clipboard-image').setup({
@@ -47,8 +54,6 @@ packer.startup(function()
       }
     }) end
   }
-
-  --use ''
 
   use {
     'wbthomason/packer.nvim',
