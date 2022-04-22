@@ -39,7 +39,7 @@ packer.startup(function()
     'ekickx/clipboard-image.nvim',
     config = function() require('clipboard-image').setup({
       default = {
-        img_dir = "/img",
+        img_dir = "img",
         img_dir_txt = "img",
         img_name = function ()
           vim.fn.inputsave()
