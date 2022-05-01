@@ -49,7 +49,7 @@ _setup_git_global_config() {
   git config --global user.email 'rodriguez10011999@gmail.com'
   git config --global color.ui false
   git config --global credential.helper "cache --timeout=43200"
-  git config --global core.pager 'vim -R -'
+  git config --global core.pager 'nvim -R -'
 }
 
 _setup_aliases() {
