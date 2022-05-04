@@ -67,6 +67,9 @@ vim.g.go_fmt_autosave = 1
 vim.g.go_mod_fmt_autosave = 1
 vim.g.go_gopls_enabled = 1
 
+-- Rust.vim
+vim.g.rustfmt_autosave = 1
+
 --[[
 the following code alternates between the tokyonight
 and papercolor colorschemes using even or odd numbers
