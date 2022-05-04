@@ -28,6 +28,7 @@ packer.startup(function()
   use 'NLKNguyen/papercolor-theme'
   use 'glepnir/galaxyline.nvim'
   use 'Avimitin/nerd-galaxyline'
+  use 'rust-lang/rust.vim'
   --use ''
 
   use {
