@@ -62,6 +62,6 @@ keymap("n", "<leader>rf", ":RustFmt<cr>", opts)
 keymap("n", "<leader>gd", "<Plug>(coc-definition)", opts)
 keymap("n", "<leader>gy", "<Plug>(coc-type-definition)", opts)
 keymap("n", "<leader>gi", "<Plug>(coc-implementation)", opts)
-keymap("n", "<leader>gr", "<Plug>(coc-reference)", opts)
+keymap("n", "<leader>gr", "<Plug>(coc-references)", opts)
 
 -- keymap("", "", "", opts)
