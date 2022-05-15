@@ -1,3 +1,4 @@
+-- Options
 local options = {
   backup = false,
   writebackup = false,
@@ -36,6 +37,21 @@ for k,v in pairs(options) do
   vim.opt[k] = v
 end
 
+-- Autocommands
+local autocmd = vim.api.nvim_create_autocmd
+
+local long_text_files = vim.api.nvim_create_augroup("LongTextFiles", {clear = true})
+autocmd(
+  {
+    "BufRead", "BufNewFile"
+  },
+  {
+    group = long_text_files,
+    pattern = {'*.md', "*.txt"},
+    command = "set wrap",
+  }
+)
+
 -- FZF
 vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --no-ignore-vcs --fixed-strings"
 vim.env.FZF_DEFAULT_OPTS = [[--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up]]
@@ -66,9 +82,13 @@ vim.g.go_auto_type_info = 1
 vim.g.go_fmt_autosave = 1
 vim.g.go_mod_fmt_autosave = 1
 vim.g.go_gopls_enabled = 1
+vim.g.go_fmt_command = "goimports"
 
 -- Rust.vim
 vim.g.rustfmt_autosave = 1
+
+-- Racer
+vim.g.racer_cmd = "/home/user/.cargo/bin/racer"
 
 --[[
 the following code alternates between the tokyonight
