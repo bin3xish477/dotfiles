@@ -47,8 +47,8 @@ vim.g.user_emmet_leader_key = ","
 vim.g.gitgutter_git_executable = "/usr/bin/git"
 
 -- VimGo
-vim.g.go_def_mode='gopls'
-vim.g.go_info_mode='gopls'
+vim.g.go_def_mode = 'gopls'
+vim.g.go_info_mode = 'gopls'
 vim.g.go_highlight_structs = 1
 vim.g.go_highlight_methods = 1
 vim.g.go_highlight_functions = 1
@@ -62,7 +62,7 @@ vim.g.go_highlight_generate_tags = 1
 vim.g.go_highlight_format_strings = 1
 vim.g.go_highlight_variable_declarations = 1
 vim.g.go_highlight_variable_assignments = 1
-vim.g.go_auto_type_info =1
+vim.g.go_auto_type_info = 1
 vim.g.go_fmt_autosave = 1
 vim.g.go_mod_fmt_autosave = 1
 vim.g.go_gopls_enabled = 1
