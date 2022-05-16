@@ -10,7 +10,7 @@ curl -s https://raw.githubusercontent.com/bin3xish477/dotfiles/master/mysetup.sh
 
 > used to not have to repeatedly give credentials via CLI to git on WSL Linux boxes
 ```bash
-git config --global credential.helper "/mnt/f/opt/Git/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
+git config --global credential.helper "/mnt/f/opt/Git/Git/mingw64/libexec/git-core/git-credential-wincred.exe"
 ```
 
 ### Environment Variables
