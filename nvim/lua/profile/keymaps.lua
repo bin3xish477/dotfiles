@@ -30,8 +30,8 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- resize windows with arrow keys
 keymap("n", "<C-UP>", ":resize +2<cr>", opts)
 keymap("n", "<C-Down>", ":resize -2<cr>", opts)
-keymap("n", "<C-Left>", ":vertical resize +2<cr>", opts)
-keymap("n", "<C-Right>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
 keymap("n", "<leader>db", ":normal gg<s-v>Gd<cr>", opts)
 keymap("n", "<leader>dfl", "<s-v>ggd<cr>", opts)
