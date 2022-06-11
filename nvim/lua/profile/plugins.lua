@@ -29,6 +29,7 @@ packer.startup(function()
   use 'glepnir/galaxyline.nvim'
   use 'Avimitin/nerd-galaxyline'
   use 'rust-lang/rust.vim'
+  use 's3rvac/vim-syntax-yara'
   --use ''
 
   use {
@@ -94,4 +95,5 @@ packer.startup(function()
     'junegunn/fzf',
     run = './install --bin',
   }
+  use 'junegunn/fzf.vim'
 end)
