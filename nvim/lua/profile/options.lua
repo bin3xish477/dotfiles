@@ -42,13 +42,22 @@ local autocmd = vim.api.nvim_create_autocmd
 
 local long_text_files = vim.api.nvim_create_augroup("LongTextFiles", {clear = true})
 autocmd(
-  {
-    "BufRead", "BufNewFile"
-  },
+  {"BufRead", "BufNewFile"},
   {
     group = long_text_files,
     pattern = {'*.md', "*.txt"},
     command = "set wrap",
+  }
+)
+
+-- syntax highlighting for Yara rules
+local highlight_yara_files = vim.api.nvim_create_augroup("HighlightYaraFiles", {clear = true})
+autocmd(
+  {"BufNewFile", "BufRead"},
+  {
+    group = highlight_yara_files,
+    pattern = {"*.yara", "*.yara"},
+    command = "setlocal filetype=yara",
   }
 )
 
