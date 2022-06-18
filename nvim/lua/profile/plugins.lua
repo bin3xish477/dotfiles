@@ -30,7 +30,7 @@ packer.startup(function()
   use 'Avimitin/nerd-galaxyline'
   use 'rust-lang/rust.vim'
   use 's3rvac/vim-syntax-yara'
-  --use ''
+  use 'ellisonleao/gruvbox.nvim'
 
   use {
     'fatih/vim-go',

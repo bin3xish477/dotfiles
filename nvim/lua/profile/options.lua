@@ -106,10 +106,13 @@ and papercolor colorschemes using even or odd numbers
 math.randomseed(os.time()) --set seed to current time
 local rand = math.random(1000)
 
-if (rand % 2 == 0) then
+if (rand % 3 == 0) then
   --Tokyonight
   vim.g.tokyonight_style = "night"
   vim.cmd 'colorscheme tokyonight'
+elseif (rand % 2 == 0) then
+  --Gruvbox
+  vim.cmd 'colorscheme gruvbox'
 else
   --PaperColor
   vim.cmd 'colorscheme PaperColor'
