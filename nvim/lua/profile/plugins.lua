@@ -38,26 +38,6 @@ packer.startup(function()
   }
 
   use {
-    'ekickx/clipboard-image.nvim',
-    config = function() require('clipboard-image').setup({
-      default = {
-        img_dir = "img",
-        img_dir_txt = "img",
-        img_name = function ()
-          vim.fn.inputsave()
-          local name = vim.fn.input('Image name: ')
-          vim.fn.inputrestore()
-
-          if name == nil or name == '' then
-            return os.date('%y-%m-%d-%H-%M-%S')
-          end
-          return name
-        end,
-      }
-    }) end
-  }
-
-  use {
     'wbthomason/packer.nvim',
     opt = false,
   }
