@@ -56,6 +56,7 @@ packer.startup(function()
         view = {
           width = 30,
           relativenumber = true,
+          side = "right",
         },
         filters = {
           dotfiles = true,
