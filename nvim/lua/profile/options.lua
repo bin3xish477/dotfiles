@@ -25,6 +25,7 @@ local options = {
   termguicolors = true,
   background = "dark",
   list = true,
+  completeopt = {"noinsert", "menuone", "noselect"},
   listchars = {
     eol = "$",
     trail = "+",
