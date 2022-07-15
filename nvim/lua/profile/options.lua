@@ -1,3 +1,21 @@
+local opt    = vim.opt
+local env    = vim.env
+local glb = vim.g
+
+-- Neovide configuration
+if glb.neovide then
+  env.NEOVIDE_MULTIGRID = "1" --enable floating windows
+  glb.neovide_fullscreen = 1
+  glb.neovide_refresh_rate = 165
+  glb.neovide_transparency = 0.80
+  glb.neovide_no_idle = 1
+  --glb.neovide_cursor_vfx_particle_speed = 10.0
+  --glb.neovide_cursor_vfx_particle_density = 100.0
+  --glb.neovide_cursor_antialiasing = 0 -- fixes cursor visual issues
+  --glb.neovide_cursor_vfx_mode = "sonicboom"
+  --glb.neovide_remember_window_size = 1
+end
+
 -- Options
 local options = {
   backup = false,
@@ -8,7 +26,7 @@ local options = {
   clipboard = "unnamedplus",
   ignorecase = true,
   undofile = true,
-  undodir = string.format("%s/.undodir", vim.env.HOME),
+  undodir = string.format("%s/.undodir", env.HOME),
   encoding = "UTF-8",
   pastetoggle = "<F2>",
   shiftwidth = 2,
@@ -35,7 +53,7 @@ local options = {
 }
 
 for k,v in pairs(options) do
-  vim.opt[k] = v
+  opt[k] = v
 end
 
 -- Autocommands
@@ -63,42 +81,42 @@ autocmd(
 )
 
 -- FZF
-vim.env.FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --no-ignore-vcs --fixed-strings"
-vim.env.FZF_DEFAULT_OPTS = [[--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up]]
+env.FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --no-ignore-vcs --fixed-strings"
+env.FZF_DEFAULT_OPTS = [[--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --bind ctrl-j:down,ctrl-k:up,ctrl-h:preview-down,ctrl-l:preview-up]]
 
 -- Emmet
-vim.g.user_emmet_leader_key = ","
+glb.user_emmet_leader_key = ","
 
 -- Gitgutter
-vim.g.gitgutter_git_executable = "/usr/bin/git"
+glb.gitgutter_git_executable = "/usr/bin/git"
 
 -- VimGo
-vim.g.go_def_mode = 'gopls'
-vim.g.go_info_mode = 'gopls'
-vim.g.go_highlight_structs = 1
-vim.g.go_highlight_methods = 1
-vim.g.go_highlight_functions = 1
-vim.g.go_highlight_function_calls = 1
-vim.g.go_highlight_function_parameters = 1
-vim.g.go_highlight_operators = 1
-vim.g.go_highlight_types = 1
-vim.g.go_highlight_fields = 1
-vim.g.go_highlight_build_constraints = 1
-vim.g.go_highlight_generate_tags = 1
-vim.g.go_highlight_format_strings = 1
-vim.g.go_highlight_variable_declarations = 1
-vim.g.go_highlight_variable_assignments = 1
-vim.g.go_auto_type_info = 1
-vim.g.go_fmt_autosave = 1
-vim.g.go_mod_fmt_autosave = 1
-vim.g.go_gopls_enabled = 1
-vim.g.go_fmt_command = "goimports"
+glb.go_def_mode = 'gopls'
+glb.go_info_mode = 'gopls'
+glb.go_highlight_structs = 1
+glb.go_highlight_methods = 1
+glb.go_highlight_functions = 1
+glb.go_highlight_function_calls = 1
+glb.go_highlight_function_parameters = 1
+glb.go_highlight_operators = 1
+glb.go_highlight_types = 1
+glb.go_highlight_fields = 1
+glb.go_highlight_build_constraints = 1
+glb.go_highlight_generate_tags = 1
+glb.go_highlight_format_strings = 1
+glb.go_highlight_variable_declarations = 1
+glb.go_highlight_variable_assignments = 1
+glb.go_auto_type_info = 1
+glb.go_fmt_autosave = 1
+glb.go_mod_fmt_autosave = 1
+glb.go_gopls_enabled = 1
+glb.go_fmt_command = "goimports"
 
 -- Rust.vim
-vim.g.rustfmt_autosave = 1
+glb.rustfmt_autosave = 1
 
 -- Racer
-vim.g.racer_cmd = "/home/user/.cargo/bin/racer"
+glb.racer_cmd = "/home/user/.cargo/bin/racer"
 
 --[[
 the following code alternates between the tokyonight
@@ -109,7 +127,7 @@ local rand = math.random(1000)
 
 if (rand % 3 == 0) then
   --Tokyonight
-  vim.g.tokyonight_style = "night"
+  glb.tokyonight_style = "night"
   vim.cmd 'colorscheme tokyonight'
 elseif (rand % 2 == 0) then
   --Gruvbox
@@ -118,3 +136,4 @@ else
   --PaperColor
   vim.cmd 'colorscheme PaperColor'
 end
+
