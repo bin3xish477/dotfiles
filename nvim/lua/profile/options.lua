@@ -118,10 +118,6 @@ glb.rustfmt_autosave = 1
 -- Racer
 glb.racer_cmd = "/home/user/.cargo/bin/racer"
 
---[[
-the following code alternates between the tokyonight
-and papercolor colorschemes using even or odd numbers
-]]
 math.randomseed(os.time()) --set seed to current time
 local rand = math.random(1000)
 
