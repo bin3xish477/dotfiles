@@ -33,6 +33,7 @@ keymap("n", "<C-Down>", ":resize -2<cr>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<cr>", opts)
 
+-- deleting buffer keymaps
 keymap("n", "<leader>db", ":normal gg<s-v>Gd<cr>", opts)
 keymap("n", "<leader>dfl", "<s-v>ggd<cr>", opts)
 keymap("n", "<leader>dll", "<s-v>Gd<cr>", opts)
@@ -48,6 +49,8 @@ keymap("n", "<leader>r", ":NvimTreeRefresh<cr>", opts)
 keymap("n", "<leader>bp", ":BufferPrevious<cr>", opts)
 keymap("n", "<leader>bn", ":BufferNext<cr>", opts)
 keymap("n", "<leader>bc", ":BufferClose<cr>", opts)
+keymap("n", "<leader>ca", ":BufferCloseAllButCurrent<cr>", opts)
+
 
 -- exit terminal with ESC
 keymap("t", "<esc>", "<c-\\><c-n>:q!<esc>", opts)
