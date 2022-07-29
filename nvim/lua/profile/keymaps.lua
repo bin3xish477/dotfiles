@@ -46,9 +46,9 @@ keymap("n", "<leader>t", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>r", ":NvimTreeRefresh<cr>", opts)
 
 -- Barbar
-keymap("n", "<leader>bp", ":BufferPrevious<cr>", opts)
-keymap("n", "<leader>bn", ":BufferNext<cr>", opts)
-keymap("n", "<leader>bc", ":BufferClose<cr>", opts)
+keymap("n", "<s-h>", ":BufferPrevious<cr>", opts)
+keymap("n", "<s-l>", ":BufferNext<cr>", opts)
+keymap("n", "<s-c>", ":BufferClose<cr>", opts)
 keymap("n", "<leader>ca", ":BufferCloseAllButCurrent<cr>", opts)
 
 
