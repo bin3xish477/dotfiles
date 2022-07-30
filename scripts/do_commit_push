@@ -1,0 +1,13 @@
+#! /bin/bash
+
+# requirements: sudo apt install gum
+
+do_push() {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
+COMMIT_MSG=$(gum write --placeholder "commit message...")
+
+gum confirm "commit changes??" && do_push $COMMIT_MSG
