@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# requirements: sudo apt install gum
+# requirements: go install -v github.com/charmbracelet/gum@latest
 
 do_push() {
   git add .
