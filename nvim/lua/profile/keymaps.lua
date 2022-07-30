@@ -38,6 +38,10 @@ keymap("n", "<leader>db", ":normal gg<s-v>Gd<cr>", opts)
 keymap("n", "<leader>dfl", "<s-v>ggd<cr>", opts)
 keymap("n", "<leader>dll", "<s-v>Gd<cr>", opts)
 
+-- dragging lines up or down
+keymap("n", "<up>", ":move-2<cr>", opts)
+keymap("n", "<down>", ":move+<cr>", opts)
+
 -- FZF
 keymap("n", "<leader>ff", ":FZF<cr>", opts)
 
