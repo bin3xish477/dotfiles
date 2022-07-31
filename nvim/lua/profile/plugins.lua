@@ -85,4 +85,23 @@ packer.startup(function(use)
     run = './install --bin',
   }
   use 'junegunn/fzf.vim'
+  use {
+    'akinsho/toggleterm.nvim',
+    config = function() require('toggleterm').setup {
+      open_mapping = [[<c-\>]],
+      size = 20,
+      shading_factors = 1,
+      hide_numbers = true,
+      start_in_insert = true,
+      close_on_exit = true,
+      shade_terminals = true,
+      insert_mappings = true,
+      shell = vim.o.shell,
+      direction = "float",
+      float_opts = {
+        border = "curved",
+        winblend = 0,
+      }
+    } end
+  }
 end)
