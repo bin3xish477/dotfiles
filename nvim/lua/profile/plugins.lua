@@ -1,6 +1,5 @@
 local packer = require('packer')
 
-
 packer.init {
   display = {
     open_fn = require('packer.util').float,
@@ -8,17 +7,25 @@ packer.init {
   }
 }
 
-local use = packer.use
-
 packer.reset()
-packer.startup(function()
+packer.startup(function(use)
   use {
     'numToStr/Comment.nvim',
     config = function() require('Comment').setup {
       padding = false,
     } end
   }
-  use 'romgrk/barbar.nvim'
+  use {
+    'romgrk/barbar.nvim',
+    config = function() require('bufferline').setup {
+      auto_hide = false,
+      closable = true,
+      icons = true,
+    } end,
+    wants = {
+      'kyazdani42/nvim-web-devicons',
+    },
+  }
   use 'Yggdroot/indentLine'
   use 'tpope/vim-fugitive'
   use 'jiangmiao/auto-pairs'
@@ -31,6 +38,7 @@ packer.startup(function()
   use 'rust-lang/rust.vim'
   use 's3rvac/vim-syntax-yara'
   use 'ellisonleao/gruvbox.nvim'
+  --use ''
 
   use {
     'fatih/vim-go',
@@ -56,7 +64,7 @@ packer.startup(function()
         view = {
           width = 30,
           relativenumber = true,
-          side = "right",
+          --side = "right",
         },
         filters = {
           dotfiles = true,
