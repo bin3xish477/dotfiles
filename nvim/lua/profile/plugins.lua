@@ -30,7 +30,6 @@ packer.startup(function(use)
   use 'tpope/vim-fugitive'
   use 'jiangmiao/auto-pairs'
   use 'airblade/vim-gitgutter'
-  use 'maxboisvert/vim-simple-complete'
   use 'mattn/emmet-vim'
   use 'NLKNguyen/papercolor-theme'
   use 'glepnir/galaxyline.nvim'
