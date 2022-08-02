@@ -13,6 +13,6 @@
   },
   "sql.database": "postgresql",
   "sql.lintOnSave": true,
-  "Lua.telemetry.enable": false,
-  "sumneko-lua.enableNvimLuaDev": true
+  "java.home": "/usr/lib/jvm/java-17-openjdk-amd64"
 }
+
