@@ -37,6 +37,7 @@ packer.startup(function(use)
   use 'rust-lang/rust.vim'
   use 's3rvac/vim-syntax-yara'
   use 'ellisonleao/gruvbox.nvim'
+  use 'OmniSharp/omnisharp-vim'
   --use ''
 
   use {
