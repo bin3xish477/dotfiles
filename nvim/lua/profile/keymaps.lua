@@ -44,6 +44,9 @@ keymap("n", "<down>", ":move+<cr>", opts)
 
 -- FZF
 keymap("n", "<leader>ff", ":FZF<cr>", opts)
+keymap("n", "<leader>H", ":Helptags<cr>", opts)
+keymap("n", "<leader>fc", ":Commits<cr>", opts)
+keymap("n", "<leader>fs", ":Rg<cr>", opts)
 
 -- NvimTree
 keymap("n", "<leader>t", ":NvimTreeToggle<cr>", opts)

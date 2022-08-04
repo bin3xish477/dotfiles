@@ -1,5 +1,5 @@
-local opt    = vim.opt
-local env    = vim.env
+local opt = vim.opt
+local env = vim.env
 local glb = vim.g
 
 -- Neovide configuration
