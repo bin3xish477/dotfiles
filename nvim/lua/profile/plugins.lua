@@ -26,9 +26,12 @@ packer.startup(function(use)
       'kyazdani42/nvim-web-devicons',
     },
   }
+  use {
+    'windwp/nvim-autopairs',
+    config = function() require("nvim-autopairs").setup() end
+  }
   use 'Yggdroot/indentLine'
   use 'tpope/vim-fugitive'
-  use 'jiangmiao/auto-pairs'
   use 'airblade/vim-gitgutter'
   use 'mattn/emmet-vim'
   use 'NLKNguyen/papercolor-theme'
@@ -59,7 +62,7 @@ packer.startup(function(use)
         'kyazdani42/nvim-web-devicons',
       },
       config = function() require('nvim-tree').setup {
-        open_on_setup = false,
+        open_on_setup = true,
         open_on_tab = false,
         view = {
           width = 30,
