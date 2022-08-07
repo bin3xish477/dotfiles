@@ -24,11 +24,4 @@ to_lowercase() {
    find $1 -depth | xargs -n 1 -d '\n' rename 's/(.*)\/([^\/]*)/$1\/\L$2/' {} \;
 }
 
-commit_and_push () {
-        MSG=$1
-        git add .
-        git commit -m "$MSG"
-        echo -e 'bin3xish477\n' | git push
-}
-
 if [ "$TMUX" = "" ]; then tmux new-session -s main; fi

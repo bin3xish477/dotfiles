@@ -30,18 +30,6 @@ packer.startup(function(use)
     'windwp/nvim-autopairs',
     config = function() require("nvim-autopairs").setup() end
   }
-  use 'Yggdroot/indentLine'
-  use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
-  use 'mattn/emmet-vim'
-  use 'NLKNguyen/papercolor-theme'
-  use 'glepnir/galaxyline.nvim'
-  use 'Avimitin/nerd-galaxyline'
-  use 'rust-lang/rust.vim'
-  use 's3rvac/vim-syntax-yara'
-  use 'ellisonleao/gruvbox.nvim'
-  use 'OmniSharp/omnisharp-vim'
-  --use ''
 
   use {
     'fatih/vim-go',
@@ -107,4 +95,42 @@ packer.startup(function(use)
       }
     } end
   }
+
+  -- tree-sitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = 'TSUdate',
+    config = function() require('nvim-treesitter.configs').setup {
+      ensure_installed = {
+        "c", "cpp", "c_sharp", "lua", "rust", "go", "yaml", "json", "java", "python",
+        "bash", "nix", "markdown", "regex", "sql", "typescript", "ruby", "graphql",
+        "gomod", "gowork", "dockerfile",
+      },
+      sync_install = false,
+      auto_install = true,
+      highlight = {
+        enable = true,
+      },
+      rainbow = {
+        enable = true,
+        extended_mode = true,
+        max_file_lines = nil,
+      }
+    } end
+  }
+
+  use 'p00f/nvim-ts-rainbow'
+
+  use 'Yggdroot/indentLine'
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
+  use 'mattn/emmet-vim'
+  use 'NLKNguyen/papercolor-theme'
+  use 'glepnir/galaxyline.nvim'
+  use 'Avimitin/nerd-galaxyline'
+  use 'rust-lang/rust.vim'
+  use 's3rvac/vim-syntax-yara'
+  use 'ellisonleao/gruvbox.nvim'
+  use 'OmniSharp/omnisharp-vim'
+  --use ''
 end)
