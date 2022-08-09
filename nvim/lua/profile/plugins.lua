@@ -104,7 +104,7 @@ packer.startup(function(use)
       ensure_installed = {
         "c", "cpp", "c_sharp", "lua", "rust", "go", "yaml", "json", "java", "python",
         "bash", "nix", "markdown", "regex", "sql", "typescript", "ruby", "graphql",
-        "gomod", "gowork", "dockerfile",
+        "gomod", "gowork", "dockerfile", "javascript", "tsx", "toml",
       },
       sync_install = false,
       auto_install = true,
