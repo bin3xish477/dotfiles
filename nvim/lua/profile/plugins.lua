@@ -120,27 +120,30 @@ packer.startup(function(use)
       }
     } end
   }
-  use { 
+  use {
     'hrsh7th/nvim-cmp',
     requires = {
       'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
     },
-    config = function() 
+    config = function()
       local cmp = require('cmp')
       cmp.setup {
-        sources = cmp.config.sources({
-          {name = "buffer", keyword_length = 2},
-          {name = "path", keyword_length = 2},
-          {name = "cmdline", keyword_length = 2},
-          {name = "nvim_lsp", keyword_length = 2},
-        }),
-        mapping = cmp.mapping.preset.insert({
+        mapping = {
+          ['<C-n>'] = cmp.mapping.select_next_item(),
+          ['<C-p>'] = cmp.mapping.select_prev_item(),
           ['<CR>'] = cmp.mapping.confirm {
-            behavior = cmd.ConfirmBehavior.Insert,
+            behavior = cmp.ConfirmBehavior.Insert,
             select = true,
-          }
-        }),
+          },
+          ['<C-y>'] = cmp.config.disable,
+        },
+        sources = {
+          {name = 'nvim_lsp'},
+          {name = 'buffer'},
+          {name = 'path'},
+          {name = 'cmdline'},
+        },
       }
     end
   }
