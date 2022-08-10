@@ -80,4 +80,8 @@ else
     keymap("x", "<leader>sh", ":!zsh<cr>", opts)
 end
 
+if vim.g.neovide then
+  keymap("i", "<c-v>", "<c-r>+", opts)
+end
+
 -- keymap("", "", "", opts)
