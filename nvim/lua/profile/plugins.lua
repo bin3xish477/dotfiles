@@ -41,10 +41,6 @@ packer.startup(function(use)
     opt = false,
   }
   use {
-    'neoclide/coc.nvim',
-    branch = 'release'
-  }
-  use {
       'kyazdani42/nvim-tree.lua',
       requires = {
         'kyazdani42/nvim-web-devicons',
@@ -151,6 +147,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-emoji'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'p00f/nvim-ts-rainbow'
   use 'Yggdroot/indentLine'
@@ -164,5 +161,8 @@ packer.startup(function(use)
   use 's3rvac/vim-syntax-yara'
   use 'ellisonleao/gruvbox.nvim'
   use 'OmniSharp/omnisharp-vim'
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
   --use ''
 end)
