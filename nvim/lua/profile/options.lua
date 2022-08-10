@@ -5,7 +5,7 @@ local glb = vim.g
 -- Neovide configuration
 if glb.neovide then
   env.NEOVIDE_MULTIGRID = "1" --enable floating windows
-  glb.neovide_fullscreen = 1
+  glb.neovide_fullscreen = 0
   glb.neovide_refresh_rate = 165
   glb.neovide_transparency = 0.85
   glb.neovide_no_idle = 1
@@ -43,9 +43,9 @@ local options = {
   termguicolors = true,
   background = "dark",
   list = true,
-  completeopt = {"noinsert", "menuone", "noselect"},
+  completeopt = {"menu", "menuone", "noselect"},
   listchars = {
-    eol = "$",
+    eol = "↵",
     trail = "+",
     tab = "> "
   },

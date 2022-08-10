@@ -6,8 +6,8 @@ packer.init {
     prompt_border = 'double',
   }
 }
-
 packer.reset()
+
 packer.startup(function(use)
   use {
     'numToStr/Comment.nvim',
@@ -78,6 +78,7 @@ packer.startup(function(use)
   use 'junegunn/fzf.vim'
   use {
     'akinsho/toggleterm.nvim',
+    tag = 'v2.*',
     config = function() require('toggleterm').setup {
       open_mapping = [[<c-\>]],
       size = 20,
@@ -87,6 +88,7 @@ packer.startup(function(use)
       close_on_exit = true,
       shade_terminals = true,
       insert_mappings = true,
+      auto_scroll = true,
       shell = vim.o.shell,
       direction = "float",
       float_opts = {
@@ -104,7 +106,7 @@ packer.startup(function(use)
       ensure_installed = {
         "c", "cpp", "c_sharp", "lua", "rust", "go", "yaml", "json", "java", "python",
         "bash", "nix", "markdown", "regex", "sql", "typescript", "ruby", "graphql",
-        "gomod", "gowork", "dockerfile", "javascript", "tsx", "toml",
+        "gomod", "gowork", "dockerfile", "javascript", "tsx", "toml", "css",
       },
       sync_install = false,
       auto_install = true,
@@ -118,9 +120,36 @@ packer.startup(function(use)
       }
     } end
   }
+  use { 
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
+    },
+    config = function() 
+      local cmp = require('cmp')
+      cmp.setup {
+        sources = cmp.config.sources({
+          {name = "buffer", keyword_length = 2},
+          {name = "path", keyword_length = 2},
+          {name = "cmdline", keyword_length = 2},
+          {name = "nvim_lsp", keyword_length = 2},
+        }),
+        mapping = cmp.mapping.preset.insert({
+          ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmd.ConfirmBehavior.Insert,
+            select = true,
+          }
+        }),
+      }
+    end
+  }
 
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
   use 'p00f/nvim-ts-rainbow'
-
   use 'Yggdroot/indentLine'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
