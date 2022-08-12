@@ -140,6 +140,7 @@ packer.startup(function(use)
           {name = 'buffer'},
           {name = 'path'},
           {name = 'cmdline'},
+          {name = 'emoji', insert = true},
         },
         snippet = {
           expand = function(args)
