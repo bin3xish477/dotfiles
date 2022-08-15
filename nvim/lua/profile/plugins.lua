@@ -95,6 +95,7 @@ packer.startup(function(use)
   }
 
   -- tree-sitter
+  use 'p00f/nvim-ts-rainbow'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = 'TSUdate',
@@ -158,7 +159,6 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-emoji'
   use 'hrsh7th/cmp-nvim-lsp'
-  use 'p00f/nvim-ts-rainbow'
   use 'Yggdroot/indentLine'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
