@@ -1,7 +1,5 @@
 #! /bin/bash
 
-# requirements: go install -v github.com/charmbracelet/gum@latest
-
 do_push() {
   git add .
   git commit -m "$1"
@@ -11,3 +9,5 @@ do_push() {
 COMMIT_MSG=$(gum write --placeholder "commit message...")
 
 gum confirm "commit changes??" && do_push $COMMIT_MSG
+
+
