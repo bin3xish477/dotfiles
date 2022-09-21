@@ -58,19 +58,12 @@ keymap("n", "<s-l>", ":BufferNext<cr>", opts)
 keymap("n", "<s-c>", ":BufferClose<cr>", opts)
 keymap("n", "<leader>ca", ":BufferCloseAllButCurrent<cr>", opts)
 
-
 -- exit terminal with ESC
 keymap("t", "<esc>", "<c-\\><c-n>:q!<esc>", opts)
 
 -- Rust.vim
 keymap("n", "<leader>rr", ":RustRun<cr>", opts)
 keymap("n", "<leader>rf", ":RustFmt<cr>", opts)
-
--- Coc.nvim
-keymap("n", "<leader>gd", "<Plug>(coc-definition)", opts)
-keymap("n", "<leader>gy", "<Plug>(coc-type-definition)", opts)
-keymap("n", "<leader>gi", "<Plug>(coc-implementation)", opts)
-keymap("n", "<leader>gr", "<Plug>(coc-references)", opts)
 
 if vim.o.shell == "/bin/bash"
   then
