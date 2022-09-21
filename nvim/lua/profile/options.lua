@@ -49,7 +49,7 @@ local options = {
     trail = "+",
     tab = "> "
   },
-  shell = env.SHELL
+  shell = env.SHELL,
 }
 
 for k,v in pairs(options) do
