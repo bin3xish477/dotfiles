@@ -66,12 +66,6 @@ keymap("t", "<esc>", "<c-\\><c-n>:q!<esc>", opts)
 keymap("n", "<leader>rr", ":RustRun<cr>", opts)
 keymap("n", "<leader>rf", ":RustFmt<cr>", opts)
 
--- Coc.nvim
-keymap("n", "<leader>gd", "<Plug>(coc-definition)", opts)
-keymap("n", "<leader>gy", "<Plug>(coc-type-definition)", opts)
-keymap("n", "<leader>gi", "<Plug>(coc-implementation)", opts)
-keymap("n", "<leader>gr", "<Plug>(coc-references)", opts)
-
 if vim.o.shell == "/bin/bash"
   then
     keymap("x", "<leader>sh", ":!bash<cr>", opts)
