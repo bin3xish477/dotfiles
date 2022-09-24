@@ -151,6 +151,11 @@ packer.startup(function(use)
       }
     end
   }
+    
+  use {
+    'jakewvincent/mkdnflow.nvim',
+    config = function() require('mkdnflow').setup{} end,
+  }
 
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
