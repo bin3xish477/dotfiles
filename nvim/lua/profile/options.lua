@@ -7,7 +7,7 @@ if glb.neovide then
   env.NEOVIDE_MULTIGRID = "1" --enable floating windows
   glb.neovide_fullscreen = 0
   glb.neovide_refresh_rate = 165
-  glb.neovide_transparency = 0.85
+  glb.neovide_transparency = 0.95
   glb.neovide_no_idle = 1
   --glb.neovide_cursor_vfx_particle_speed = 10.0
   --glb.neovide_cursor_vfx_particle_density = 100.0
@@ -49,7 +49,7 @@ local options = {
     trail = "+",
     tab = "> "
   },
-  shell = env.SHELL,
+  shell = "/bin/bash",
 }
 
 for k,v in pairs(options) do

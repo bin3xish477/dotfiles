@@ -85,7 +85,7 @@ packer.startup(function(use)
       shade_terminals = true,
       insert_mappings = true,
       auto_scroll = true,
-      shell = vim.o.shell,
+      shell = '/bin/zsh',
       direction = "float",
       float_opts = {
         border = "curved",
@@ -151,10 +151,10 @@ packer.startup(function(use)
       }
     end
   }
-    
+  
   use {
     'jakewvincent/mkdnflow.nvim',
-    config = function() require('mkdnflow').setup{} end,
+    config = function () require('mkdnflow').setup{} end,
   }
 
   use 'saadparwaiz1/cmp_luasnip'

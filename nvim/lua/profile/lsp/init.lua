@@ -6,11 +6,12 @@ end
 require 'profile.lsp.mason'
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local servers = {
   'gopls', 'rust_analyzer', 'pyright', 'marksman',
-  'taplo', 'bashls', 'sumneko_lua',
+  'taplo', 'bashls', 'sumneko_lua', 'yamlls',
+  'jdtls',
 }
 
 for _, lsp in ipairs(servers) do
