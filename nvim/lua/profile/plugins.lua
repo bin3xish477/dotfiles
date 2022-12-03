@@ -136,12 +136,15 @@ packer.startup(function(use)
           ['<C-y>'] = cmp.config.disable,
         },
         sources = {
-          {name = 'luasnip'},
-          {name = 'nvim_lsp'},
-          {name = 'buffer'},
-          {name = 'path'},
-          {name = 'cmdline'},
+          {name = 'luasnip', keyword_length = 3 },
+          {name = 'nvim_lsp', keyword_length = 3},
+          {name = 'buffer', keyword_length = 3},
+          {name = 'path', keyword_length = 3},
+          {name = 'cmdline', keyword_length = 3},
           {name = 'emoji', insert = true},
+        },
+        window = {
+          documentation = cmp.config.window.bordered()
         },
         snippet = {
           expand = function(args)
