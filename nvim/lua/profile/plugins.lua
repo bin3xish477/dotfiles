@@ -124,6 +124,7 @@ packer.startup(function(use)
       'hrsh7th/cmp-cmdline', 'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
+      require("luasnip.loaders.from_vscode").lazy_load()
       local cmp = require('cmp')
       cmp.setup {
         mapping = {
@@ -136,7 +137,7 @@ packer.startup(function(use)
           ['<C-y>'] = cmp.config.disable,
         },
         sources = {
-          {name = 'luasnip', keyword_length = 3 },
+          {name = 'luasnip', keyword_length = 2 },
           {name = 'nvim_lsp', keyword_length = 3},
           {name = 'buffer', keyword_length = 3},
           {name = 'path', keyword_length = 3},
@@ -179,6 +180,7 @@ packer.startup(function(use)
   }
 
   use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
