@@ -56,6 +56,9 @@ for k,v in pairs(options) do
   opt[k] = v
 end
 
+-- for Python provider
+glb.python3_host_prog = '/usr/bin/python3'
+
 -- Autocommands
 local autocmd = vim.api.nvim_create_autocmd
 
