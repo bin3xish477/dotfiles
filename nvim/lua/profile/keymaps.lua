@@ -62,6 +62,9 @@ keymap("n", "<leader>ca", ":BufferCloseAllButCurrent<cr>", opts)
 -- exit terminal with ESC
 keymap("t", "<esc>", "<c-\\><c-n>:q!<esc>", opts)
 
+-- clear highlighted search
+keymap("n", "<leader>", ":nohlsearch<cr>", opts)
+
 -- Rust.vim
 keymap("n", "<leader>rr", ":RustRun<cr>", opts)
 keymap("n", "<leader>rf", ":RustFmt<cr>", opts)
