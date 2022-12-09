@@ -179,6 +179,17 @@ packer.startup(function(use)
     end
   }
 
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true
+    },
+    config = function()
+      require('lualine').setup({})
+    end
+  }
+
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
