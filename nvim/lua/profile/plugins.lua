@@ -138,10 +138,10 @@ packer.startup(function(use)
         },
         sources = {
           {name = 'luasnip', keyword_length = 2 },
-          {name = 'nvim_lsp', keyword_length = 3},
-          {name = 'buffer', keyword_length = 3},
-          {name = 'path', keyword_length = 3},
-          {name = 'cmdline', keyword_length = 3},
+          {name = 'nvim_lsp', keyword_length = 2},
+          {name = 'buffer', keyword_length = 2},
+          {name = 'path', keyword_length = 2},
+          {name = 'cmdline', keyword_length = 2},
           {name = 'emoji', insert = true},
         },
         window = {
@@ -190,6 +190,13 @@ packer.startup(function(use)
     end
   }
 
+  use {
+    'ray-x/lsp_signature.nvim',
+    config = function ()
+      require('lsp_signature').setup({})
+    end
+  }
+
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
@@ -213,4 +220,5 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   --use ''
+
 end)
