@@ -64,10 +64,6 @@ packer.startup(function(use)
       } end
   }
   use {
-    'folke/tokyonight.nvim',
-    branch = 'main',
-  }
-  use {
     'junegunn/fzf',
     run = './install --bin',
   }
@@ -202,6 +198,14 @@ packer.startup(function(use)
     config = function () require('fidget').setup({}) end
   }
 
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function () require('indent_blankline').setup({
+      char = "┊",
+      show_trailing_blankline_indent = false,
+    }) end
+  }
+
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
@@ -210,7 +214,6 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-emoji'
   use 'hrsh7th/cmp-nvim-lsp'
-  use 'Yggdroot/indentLine'
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
   use 'mattn/emmet-vim'
@@ -224,5 +227,7 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use 'folke/tokyonight.nvim'
+  -- use ''
 
 end)
