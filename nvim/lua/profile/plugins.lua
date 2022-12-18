@@ -197,6 +197,11 @@ packer.startup(function(use)
     end
   }
 
+  use {
+    'j-hui/fidget.nvim',
+    config = function () require('fidget').setup({}) end
+  }
+
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
@@ -219,6 +224,5 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
-  --use ''
 
 end)
