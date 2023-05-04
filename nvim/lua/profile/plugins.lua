@@ -55,7 +55,6 @@ packer.startup(function(use)
         'kyazdani42/nvim-web-devicons',
       },
       config = function() require('nvim-tree').setup {
-        open_on_setup = true,
         open_on_tab = false,
         view = {
           width = 30,
