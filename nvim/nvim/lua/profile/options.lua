@@ -122,7 +122,7 @@ glb.rustfmt_autosave = 1
 glb.racer_cmd = "/home/user/.cargo/bin/racer"
 
 math.randomseed(os.time()) --set seed to current time
-local rand = math.random(100)
+local rand = math.random(1000)
 
 if (rand % 3 == 0) then
   --Tokyonight

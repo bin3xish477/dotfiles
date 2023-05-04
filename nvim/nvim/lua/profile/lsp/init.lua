@@ -10,7 +10,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 local servers = {
   'gopls', 'rust_analyzer', 'pyright', 'marksman',
-  'taplo', 'bashls', 'lua_ls', 'yamlls',
+  'taplo', 'bashls', 'sumneko_lua', 'yamlls',
   'jdtls',
 }
 

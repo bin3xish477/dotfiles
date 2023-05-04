@@ -29,7 +29,7 @@ packer.startup(function(use)
     config = function() require('bufferline').setup {
       auto_hide = false,
       closable = true,
-      icons = { filetype = { enabled = true } }
+      icons = true,
     } end,
     wants = {
       'kyazdani42/nvim-web-devicons',
