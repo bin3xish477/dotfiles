@@ -29,7 +29,7 @@ packer.startup(function(use)
     config = function() require('bufferline').setup {
       auto_hide = false,
       closable = true,
-      icons = { filetype = { enabled = true } }
+      icons = { filetype = { enabled = true } },
     } end,
     wants = {
       'kyazdani42/nvim-web-devicons',
@@ -42,7 +42,7 @@ packer.startup(function(use)
 
   use {
     'fatih/vim-go',
-    run = ':GoInstallBinaries',
+    -- run = ':GoInstallBinaries',
   }
 
   use {
@@ -214,6 +214,7 @@ packer.startup(function(use)
     }) end
   }
 
+  use 'psf/black'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
   use 'L3MON4D3/LuaSnip'
@@ -236,6 +237,7 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'folke/tokyonight.nvim'
+  use 'dart-lang/dart-vim-plugin'
   -- use ''
 
   if is_bootstrap then

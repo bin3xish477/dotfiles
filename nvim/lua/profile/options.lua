@@ -72,14 +72,13 @@ autocmd(
   }
 )
 
--- syntax highlighting for Yara rules
-local highlight_yara_files = vim.api.nvim_create_augroup("HighlightYaraFiles", {clear = true})
+local python_files = vim.api.nvim_create_augroup("PythonFiles", {clear = true})
 autocmd(
-  {"BufNewFile", "BufRead"},
+  {"BufWritePre"},
   {
-    group = highlight_yara_files,
-    pattern = {"*.yara", "*.yara"},
-    command = "setlocal filetype=yara",
+    group = python_files,
+    pattern = {'*.py'},
+    command = ":Black",
   }
 )
 
@@ -122,7 +121,7 @@ glb.rustfmt_autosave = 1
 glb.racer_cmd = "/home/user/.cargo/bin/racer"
 
 math.randomseed(os.time()) --set seed to current time
-local rand = math.random(100)
+local rand = math.random(1000)
 
 if (rand % 3 == 0) then
   --Tokyonight
