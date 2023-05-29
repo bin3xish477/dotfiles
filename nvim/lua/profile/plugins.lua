@@ -214,6 +214,15 @@ packer.startup(function(use)
     }) end
   }
 
+  use {
+    'OscarCreator/rsync.nvim',
+    run = 'make',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      }
+  }
+
+  use 'f-person/git-blame.nvim'
   use 'psf/black'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'

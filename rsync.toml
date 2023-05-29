@@ -1,0 +1,10 @@
+# this is the path to the remote. Can be either a local/remote filepath.
+# remote_path = "../copy/"
+# or if using ssh
+remote_path = "user@host:/home/user/path/"
+
+# specifying a file(s) which should be synced "down" but are on .gitignore.
+# this is a workaround to sync down files which are included on .gitignore
+# remote_includes = "build.log"
+# or using an array if multiple files are needed.
+# remote_includes = ["build.log", "build/generated.json"]
