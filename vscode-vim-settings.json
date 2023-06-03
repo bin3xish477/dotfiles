@@ -1,102 +1,76 @@
 {
-    "workbench.colorTheme": "Retro Vibes",
-    "window.zoomLevel": 2,
-    "vim.leader": ",",
-    "vim.commandLineModeKeyBindings": [],
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
-        }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [ "<C-h>" ],
-            "after": [
-                "C-w",
-                "h"
-            ]
-        },
-        {
-            "before": [ "<C-j>" ],
-            "after": [
-                "<C-w>",
-                "j"
-            ]
-        },
-        {
-            "before": [ "<C-k>" ],
-            "after": [
-                "<C-w>",
-                "k"
-            ]
-        },
-        {
-            "before": [ "<C-l>" ],
-            "after": [
-                "<C-w>",
-                "l"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "h"
-            ],
-            "commands": [":nohl"]
-        },
-        {
-            "before": [ "<S-l>" ],
-            "commands": [ "workbench.action.nextEditor" ]
-        },
-        {
-            "before": [ "<S-h>" ],
-            "commands": [ "workbench.action.previousEditor" ]
-        },
-        {
-            "before": [ "<S-c>" ],
-            "commands": [ "workbench.action.closeWindow" ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f",
-                "s",
-            ],
-            "commands": [ "workbench.action.findInFiles" ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f",
-                "f",
-            ],
-            "commands": [ "workbench.action.quickOpen" ]
-        }
-    ],
-    "vim.operatorPendingModeKeyBindingsNonRecursive": [
-        {
-            "before": [ "L" ],
-            "after": [ "$" ]
-        },
-        {
-            "before": [ "H" ],
-            "after": [ "^" ]
-        }
-    ],
-    "editor.lineNumbers": "relative",
-    "python.formatting.provider": "black",
-    "editor.formatOnSave": true,
-    "editor.fontFamily": "JetsBrainsMono Nerd Font",
-    "editor.fontSize": 10,
-    "editor.fontLigatures": true,
-    "workbench.editor.enablePreview": false,
-    "go.toolsEnvVars": {
-        "GOPROXY": "direct"
+  "workbench.colorTheme": "Retro Vibes",
+  "window.zoomLevel": 2,
+  "vim.leader": ",",
+  "vim.commandLineModeKeyBindings": [],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
     }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-h>"],
+      "after": ["C-w", "h"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "j"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<S-l>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-h>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["<leader>", "f", "s"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "editor.lineNumbers": "relative",
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "JetsBrainsMono Nerd Font",
+  "editor.fontSize": 10,
+  "editor.fontLigatures": true,
+  "workbench.editor.enablePreview": false,
+  "go.toolsEnvVars": {
+    "GOPROXY": "direct"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
