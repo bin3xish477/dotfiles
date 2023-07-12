@@ -69,11 +69,13 @@ keymap("n", "<leader>", ":nohlsearch<cr>", opts)
 keymap("n", "<leader>rr", ":RustRun<cr>", opts)
 keymap("n", "<leader>rf", ":RustFmt<cr>", opts)
 
--- Coc.nvim
-keymap("n", "<leader>gd", "<Plug>(coc-definition)", opts)
-keymap("n", "<leader>gy", "<Plug>(coc-type-definition)", opts)
-keymap("n", "<leader>gi", "<Plug>(coc-implementation)", opts)
-keymap("n", "<leader>gr", "<Plug>(coc-references)", opts)
+keymap("n", "<leader>td", ":TroubleToggle document_diagnostics<cr>", opts)
+keymap("n", "<leader>tw", ":TroubleToggle workspace_diagnostics<cr>", opts)
+keymap("n", "<leader>tr", ":TroubleToggle lsp_references<cr>", opts)
+keymap("n", "<leader>tg", ":TroubleToggle lsp_definitions<cr>", opts)
+keymap("n", "<leader>tl", ":TroubleToggle lsp_type_definitions<cr>", opts)
+keymap("n", "<leader>tq", ":TroubleToggle quickfix<cr>", opts)
+keymap("n", "<leader>tc", ":TroubleClose<cr>", opts)
 
 if vim.o.shell == "/bin/bash"
   then
