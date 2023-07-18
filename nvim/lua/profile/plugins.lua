@@ -24,6 +24,7 @@ packer.startup(function(use)
       padding = false,
     } end
   }
+
   use {
     'romgrk/barbar.nvim',
     config = function() require('bufferline').setup {
@@ -159,12 +160,12 @@ packer.startup(function(use)
       }
     end
   }
-  
+
   use {
     'jakewvincent/mkdnflow.nvim',
     config = function () require('mkdnflow').setup{} end,
   }
- 
+
   use {
     'simrat39/rust-tools.nvim',
     config = function()
@@ -203,6 +204,7 @@ packer.startup(function(use)
 
   use {
     'j-hui/fidget.nvim',
+    tag = 'legacy',
     config = function () require('fidget').setup({}) end
   }
 
@@ -219,6 +221,11 @@ packer.startup(function(use)
      dependencies = { 'nvim-tree/nvim-web-devicons' },
      opts = {
      },
+  }
+
+  use {
+    'williamboman/mason.nvim',
+    run = ':MasonUpdate'
   }
 
   use 'psf/black'
@@ -241,7 +248,6 @@ packer.startup(function(use)
   use 'ellisonleao/gruvbox.nvim'
   use 'OmniSharp/omnisharp-vim'
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'folke/tokyonight.nvim'
   use 'dart-lang/dart-vim-plugin'
