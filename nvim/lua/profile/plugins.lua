@@ -228,6 +228,8 @@ packer.startup(function(use)
     run = ':MasonUpdate'
   }
 
+  use { "catppuccin/nvim", as = "catppuccin" }
+
   use 'psf/black'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
@@ -240,7 +242,6 @@ packer.startup(function(use)
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
   use 'mattn/emmet-vim'
-  use 'NLKNguyen/papercolor-theme'
   use 'glepnir/galaxyline.nvim'
   use 'Avimitin/nerd-galaxyline'
   use 'rust-lang/rust.vim'

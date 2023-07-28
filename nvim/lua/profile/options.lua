@@ -132,6 +132,6 @@ elseif (rand % 2 == 0) then
   vim.cmd 'colorscheme gruvbox'
 else
   --PaperColor
-  vim.cmd 'colorscheme PaperColor'
+  vim.cmd 'colorscheme catppuccin-mocha'
 end
 
