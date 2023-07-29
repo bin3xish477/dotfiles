@@ -230,6 +230,14 @@ packer.startup(function(use)
 
   use { "catppuccin/nvim", as = "catppuccin" }
 
+  use {
+    'folke/todo-comments.nvim',
+    config = function() require('todo-comments').setup({
+      signs = true,
+    })
+    end
+  }
+
   use 'psf/black'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
