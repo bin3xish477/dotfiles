@@ -77,6 +77,9 @@ keymap("n", "<leader>tl", ":TroubleToggle lsp_type_definitions<cr>", opts)
 keymap("n", "<leader>tq", ":TroubleToggle quickfix<cr>", opts)
 keymap("n", "<leader>tc", ":TroubleClose<cr>", opts)
 
+-- glow.nvim
+keymap("n", "<leader>rm", ":Glow<cr>", opts)
+
 if vim.o.shell == "/bin/bash"
   then
     keymap("x", "<leader>sh", ":!bash<cr>", opts)

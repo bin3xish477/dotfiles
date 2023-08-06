@@ -238,6 +238,15 @@ packer.startup(function(use)
     end
   }
 
+  use {
+    'ellisonleao/glow.nvim',
+    config = function() require('glow').setup({
+      style = 'dark',
+      width_ratio = '0.7',
+      height_ratio = '0.7',
+    }) end,
+  }
+
   use 'psf/black'
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
