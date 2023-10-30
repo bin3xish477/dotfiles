@@ -208,11 +208,11 @@ packer.startup(function(use)
     config = function () require('fidget').setup({}) end
   }
 
-  use {
+ use {
     'lukas-reineke/indent-blankline.nvim',
     config = function () require('ibl').setup({
       indent = {
-        char = "Γöè",
+        char = "¦",
       }
     }) end
   }
