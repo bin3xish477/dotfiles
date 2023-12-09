@@ -126,7 +126,7 @@ local rand = math.random(1000)
 if (rand % 3 == 0) then
   --Tokyonight
   glb.tokyonight_style = "night"
-  vim.cmd 'colorscheme tokyonight'
+  vim.cmd 'colorscheme tokyonight-moon'
 elseif (rand % 2 == 0) then
   --Gruvbox
   vim.cmd 'colorscheme gruvbox'
